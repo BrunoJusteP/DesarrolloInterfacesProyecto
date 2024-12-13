@@ -30,70 +30,30 @@ public class InicioApp extends javax.swing.JDialog {
         jPanel1 = new javax.swing.JPanel();
         img_logo1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        btn_inicio = new javax.swing.JButton();
-        btn_inicio1 = new javax.swing.JButton();
-        btn_inicio2 = new javax.swing.JButton();
-        btn_inicio3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         roundButton1 = new vista.RoundButton();
+        roundButton2 = new vista.RoundButton();
+        roundButton3 = new vista.RoundButton();
+        roundButton4 = new vista.RoundButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        roundButton5 = new vista.RoundButton();
+        roundButton6 = new vista.RoundButton();
+        roundButton7 = new vista.RoundButton();
+        roundButton8 = new vista.RoundButton();
+        roundButton9 = new vista.RoundButton();
+        roundButton10 = new vista.RoundButton();
+        roundButton11 = new vista.RoundButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1920, 1080));
+        setMinimumSize(new java.awt.Dimension(1280, 832));
+        getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(0, 98, 173));
         jPanel1.setPreferredSize(new java.awt.Dimension(350, 832));
 
         img_logo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/EtiquetaRiojaRecurso 3x1.png"))); // NOI18N
-
-        btn_inicio.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        btn_inicio.setForeground(new java.awt.Color(0, 98, 173));
-        btn_inicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/HomeIcono.png"))); // NOI18N
-        btn_inicio.setText("  INICIO");
-        btn_inicio.setBorderPainted(false);
-        btn_inicio.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btn_inicio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_inicioActionPerformed(evt);
-            }
-        });
-
-        btn_inicio1.setBackground(new java.awt.Color(0, 98, 173));
-        btn_inicio1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        btn_inicio1.setForeground(new java.awt.Color(255, 255, 255));
-        btn_inicio1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/AjustesIcono.png"))); // NOI18N
-        btn_inicio1.setText("  AJUSTES");
-        btn_inicio1.setBorderPainted(false);
-        btn_inicio1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btn_inicio1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_inicio1ActionPerformed(evt);
-            }
-        });
-
-        btn_inicio2.setBackground(new java.awt.Color(0, 98, 173));
-        btn_inicio2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        btn_inicio2.setForeground(new java.awt.Color(255, 255, 255));
-        btn_inicio2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CalendarioIcono.png"))); // NOI18N
-        btn_inicio2.setText("  CALENDARIO");
-        btn_inicio2.setBorderPainted(false);
-        btn_inicio2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btn_inicio2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_inicio2ActionPerformed(evt);
-            }
-        });
-
-        btn_inicio3.setBackground(new java.awt.Color(0, 98, 173));
-        btn_inicio3.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        btn_inicio3.setForeground(new java.awt.Color(255, 255, 255));
-        btn_inicio3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/NotasIcono.png"))); // NOI18N
-        btn_inicio3.setText("  NOTAS");
-        btn_inicio3.setBorderPainted(false);
-        btn_inicio3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btn_inicio3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_inicio3ActionPerformed(evt);
-            }
-        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 22)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -104,6 +64,31 @@ public class InicioApp extends javax.swing.JDialog {
         roundButton1.setText("  INICIO");
         roundButton1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         roundButton1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        roundButton1.setRound(15);
+
+        roundButton2.setBackground(new java.awt.Color(0, 98, 173));
+        roundButton2.setForeground(new java.awt.Color(255, 255, 255));
+        roundButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/NotasIcono.png"))); // NOI18N
+        roundButton2.setText("  NOTAS");
+        roundButton2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        roundButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        roundButton2.setRound(15);
+
+        roundButton3.setBackground(new java.awt.Color(0, 98, 173));
+        roundButton3.setForeground(new java.awt.Color(255, 255, 255));
+        roundButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/AjustesIcono.png"))); // NOI18N
+        roundButton3.setText("  AJUSTES");
+        roundButton3.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        roundButton3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        roundButton3.setRound(15);
+
+        roundButton4.setBackground(new java.awt.Color(0, 98, 173));
+        roundButton4.setForeground(new java.awt.Color(255, 255, 255));
+        roundButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CalendarioIcono.png"))); // NOI18N
+        roundButton4.setText("  CALENDARIO");
+        roundButton4.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        roundButton4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        roundButton4.setRound(15);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -115,13 +100,12 @@ public class InicioApp extends javax.swing.JDialog {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(img_logo1)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE))
                     .addComponent(jSeparator1)
-                    .addComponent(btn_inicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_inicio1, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE)
-                    .addComponent(btn_inicio2, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE)
-                    .addComponent(btn_inicio3, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE)
-                    .addComponent(roundButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(roundButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(roundButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(roundButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(roundButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -134,59 +118,146 @@ public class InicioApp extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btn_inicio, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btn_inicio2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btn_inicio3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btn_inicio1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addComponent(roundButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(434, 434, 434))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(roundButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(roundButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(roundButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(481, 481, 481))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 843, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 350, 832);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(null);
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel2.setText("¡Hola de nuevo, nombre!");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(40, 50, 622, 72);
+
+        roundButton5.setBackground(new java.awt.Color(153, 153, 153));
+        roundButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Usuario.png"))); // NOI18N
+        roundButton5.setRound(110);
+        jPanel2.add(roundButton5);
+        roundButton5.setBounds(800, 30, 90, 90);
+
+        roundButton6.setBackground(new java.awt.Color(0, 98, 173));
+        roundButton6.setForeground(new java.awt.Color(255, 255, 255));
+        roundButton6.setRound(35);
+        roundButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                roundButton6ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(roundButton6);
+        roundButton6.setBounds(600, 150, 290, 200);
+
+        roundButton7.setBackground(new java.awt.Color(0, 98, 173));
+        roundButton7.setForeground(new java.awt.Color(255, 255, 255));
+        roundButton7.setRound(35);
+        roundButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                roundButton7ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(roundButton7);
+        roundButton7.setBounds(20, 150, 290, 200);
+
+        roundButton8.setBackground(new java.awt.Color(0, 98, 173));
+        roundButton8.setForeground(new java.awt.Color(255, 255, 255));
+        roundButton8.setRound(35);
+        roundButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                roundButton8ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(roundButton8);
+        roundButton8.setBounds(310, 150, 290, 200);
+
+        roundButton9.setBackground(new java.awt.Color(0, 98, 173));
+        roundButton9.setForeground(new java.awt.Color(255, 255, 255));
+        roundButton9.setRound(35);
+        roundButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                roundButton9ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(roundButton9);
+        roundButton9.setBounds(20, 380, 290, 200);
+
+        roundButton10.setBackground(new java.awt.Color(0, 98, 173));
+        roundButton10.setForeground(new java.awt.Color(255, 255, 255));
+        roundButton10.setRound(35);
+        roundButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                roundButton10ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(roundButton10);
+        roundButton10.setBounds(310, 380, 290, 200);
+
+        roundButton11.setBackground(new java.awt.Color(0, 98, 173));
+        roundButton11.setForeground(new java.awt.Color(255, 255, 255));
+        roundButton11.setRound(35);
+        roundButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                roundButton11ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(roundButton11);
+        roundButton11.setBounds(600, 380, 290, 200);
+
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(350, 0, 930, 830);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_inicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inicioActionPerformed
+    private void roundButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roundButton6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_inicioActionPerformed
+    }//GEN-LAST:event_roundButton6ActionPerformed
 
-    private void btn_inicio1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inicio1ActionPerformed
+    private void roundButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roundButton7ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_inicio1ActionPerformed
+    }//GEN-LAST:event_roundButton7ActionPerformed
 
-    private void btn_inicio2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inicio2ActionPerformed
+    private void roundButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roundButton8ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_inicio2ActionPerformed
+    }//GEN-LAST:event_roundButton8ActionPerformed
 
-    private void btn_inicio3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inicio3ActionPerformed
+    private void roundButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roundButton9ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_inicio3ActionPerformed
+    }//GEN-LAST:event_roundButton9ActionPerformed
+
+    private void roundButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roundButton10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_roundButton10ActionPerformed
+
+    private void roundButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roundButton11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_roundButton11ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_inicio;
-    private javax.swing.JButton btn_inicio1;
-    private javax.swing.JButton btn_inicio2;
-    private javax.swing.JButton btn_inicio3;
     private javax.swing.JLabel img_logo1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private vista.RoundButton roundButton1;
+    private vista.RoundButton roundButton10;
+    private vista.RoundButton roundButton11;
+    private vista.RoundButton roundButton2;
+    private vista.RoundButton roundButton3;
+    private vista.RoundButton roundButton4;
+    private vista.RoundButton roundButton5;
+    private vista.RoundButton roundButton6;
+    private vista.RoundButton roundButton7;
+    private vista.RoundButton roundButton8;
+    private vista.RoundButton roundButton9;
     // End of variables declaration//GEN-END:variables
 }
