@@ -6,8 +6,14 @@
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="ff" green="ff" red="ff" type="rgb"/>
     </Property>
+    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[1920, 1080]"/>
+    </Property>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[1250, 832]"/>
+      <Dimension value="[1280, 832]"/>
+    </Property>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[1280, 832]"/>
     </Property>
   </Properties>
   <SyntheticProperties>
@@ -30,27 +36,16 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-<<<<<<< HEAD
-              <Component id="jPanel1" min="-2" pref="1370" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-=======
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="188" max="32767" attributes="0"/>
->>>>>>> 1def567c085d614d54d2cd9914c95fb14e59c30c
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-<<<<<<< HEAD
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="jPanel1" min="-2" pref="846" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-=======
           <Group type="102" attributes="0">
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
->>>>>>> 1def567c085d614d54d2cd9914c95fb14e59c30c
           </Group>
       </Group>
     </DimensionLayout>
@@ -61,31 +56,17 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-<<<<<<< HEAD
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[1282, 844]"/>
-        </Property>
-=======
->>>>>>> 1def567c085d614d54d2cd9914c95fb14e59c30c
       </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-<<<<<<< HEAD
-              <Group type="102" attributes="0">
-                  <EmptySpace pref="50" max="32767" attributes="0"/>
-                  <Component id="panelInicio" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-=======
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                   <Component id="panelInicio" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
->>>>>>> 1def567c085d614d54d2cd9914c95fb14e59c30c
               </Group>
           </Group>
         </DimensionLayout>
@@ -97,18 +78,8 @@
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
-<<<<<<< HEAD
-                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="34" max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                  <Component id="panelInicio" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-=======
                   <Component id="jLabel4" min="-2" pref="781" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="23" max="32767" attributes="0"/>
->>>>>>> 1def567c085d614d54d2cd9914c95fb14e59c30c
               </Group>
           </Group>
         </DimensionLayout>
@@ -138,11 +109,7 @@
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
                               <Component id="email" alignment="0" max="32767" attributes="0"/>
                               <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
-<<<<<<< HEAD
-                              <Component id="pwd_contrasenia" max="32767" attributes="0"/>
-=======
                               <Component id="passwordField2" max="32767" attributes="0"/>
->>>>>>> 1def567c085d614d54d2cd9914c95fb14e59c30c
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
@@ -177,11 +144,7 @@
                       <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                       <Component id="email" min="-2" pref="60" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-<<<<<<< HEAD
-                      <Component id="pwd_contrasenia" min="-2" pref="60" max="-2" attributes="0"/>
-=======
                       <Component id="passwordField2" min="-2" pref="60" max="-2" attributes="0"/>
->>>>>>> 1def567c085d614d54d2cd9914c95fb14e59c30c
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -233,11 +196,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="emailActionPerformed"/>
               </Events>
             </Component>
-<<<<<<< HEAD
-            <Component class="vista.PasswordField" name="pwd_contrasenia">
-=======
             <Component class="vista.PasswordField" name="passwordField2">
->>>>>>> 1def567c085d614d54d2cd9914c95fb14e59c30c
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -247,12 +206,6 @@
                 <Property name="text" type="java.lang.String" value="contrase&#xf1;a"/>
                 <Property name="round" type="int" value="15"/>
               </Properties>
-<<<<<<< HEAD
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pwd_contraseniaMouseClicked"/>
-              </Events>
-=======
->>>>>>> 1def567c085d614d54d2cd9914c95fb14e59c30c
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
