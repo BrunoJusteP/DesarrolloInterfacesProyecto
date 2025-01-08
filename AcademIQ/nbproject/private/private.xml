@@ -5,6 +5,17 @@
         <group name="Ya Hechos">
             <file>file:/C:/Users/Alumno/Desktop/ProyectoDesarrolloInterfaces/DesarrolloInterfacesProyecto/AcademIQ/src/vista/InicioApp.java</file>
         </group>
+<<<<<<< HEAD
+        <group>
+            <file>file:/C:/Users/Alumno/Desktop/AcademIQ/AcademIQ/src/vista/PanelRound.java</file>
+            <file>file:/C:/Users/Alumno/Desktop/AcademIQ/AcademIQ/src/vista/InicioSesion.java</file>
+            <file>file:/C:/Users/Alumno/Desktop/AcademIQ/AcademIQ/src/vista/RoundButton.java</file>
+            <file>file:/C:/Users/Alumno/Desktop/AcademIQ/AcademIQ/src/vista/PasswordField.java</file>
+            <file>file:/C:/Users/Alumno/Desktop/AcademIQ/AcademIQ/src/vista/RoundTextField.java</file>
+            <file>file:/C:/Users/Alumno/Desktop/AcademIQ/AcademIQ/src/vista/InicioApp.java</file>
+        </group>
+=======
         <group/>
+>>>>>>> 1def567c085d614d54d2cd9914c95fb14e59c30c
     </open-files>
 </project-private>

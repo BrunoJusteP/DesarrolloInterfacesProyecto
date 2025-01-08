@@ -34,7 +34,11 @@ public class InicioSesion extends javax.swing.JFrame {
         panelInicio = new vista.PanelRound();
         jLabel1 = new javax.swing.JLabel();
         email = new vista.RoundTextField();
+<<<<<<< HEAD
+        pwd_contrasenia = new vista.PasswordField();
+=======
         passwordField2 = new vista.PasswordField();
+>>>>>>> 1def567c085d614d54d2cd9914c95fb14e59c30c
         jLabel2 = new javax.swing.JLabel();
         roundButton1 = new vista.RoundButton();
         panelRound2 = new vista.PanelRound();
@@ -45,9 +49,10 @@ public class InicioSesion extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setMaximumSize(new java.awt.Dimension(1920, 1080));
-        setMinimumSize(new java.awt.Dimension(1280, 832));
-        setPreferredSize(new java.awt.Dimension(1280, 832));
+        setMinimumSize(new java.awt.Dimension(1250, 832));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1282, 844));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -84,9 +89,14 @@ public class InicioSesion extends javax.swing.JFrame {
             }
         });
 
-        passwordField2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        passwordField2.setText("contraseña");
-        passwordField2.setRound(15);
+        pwd_contrasenia.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        pwd_contrasenia.setText("contraseña");
+        pwd_contrasenia.setRound(15);
+        pwd_contrasenia.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pwd_contraseniaMouseClicked(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -162,7 +172,11 @@ public class InicioSesion extends javax.swing.JFrame {
                     .addGroup(panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(email, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<<<<<<< HEAD
+                        .addComponent(pwd_contrasenia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+=======
                         .addComponent(passwordField2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+>>>>>>> 1def567c085d614d54d2cd9914c95fb14e59c30c
                 .addGap(33, 33, 33))
             .addGroup(panelInicioLayout.createSequentialGroup()
                 .addGap(119, 119, 119)
@@ -189,7 +203,7 @@ public class InicioSesion extends javax.swing.JFrame {
                 .addGap(51, 51, 51)
                 .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47)
-                .addComponent(passwordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pwd_contrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
@@ -215,21 +229,37 @@ public class InicioSesion extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+<<<<<<< HEAD
+                .addContainerGap(50, Short.MAX_VALUE)
+                .addComponent(panelInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel4))
+=======
                 .addGap(36, 36, 36)
                 .addComponent(panelInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+>>>>>>> 1def567c085d614d54d2cd9914c95fb14e59c30c
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+<<<<<<< HEAD
+                .addComponent(jLabel4)
+                .addGap(0, 34, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(panelInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+=======
                 .addGap(29, 29, 29)
                 .addComponent(panelInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 781, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 23, Short.MAX_VALUE))
+>>>>>>> 1def567c085d614d54d2cd9914c95fb14e59c30c
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -237,27 +267,62 @@ public class InicioSesion extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1370, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+=======
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(188, Short.MAX_VALUE))
+>>>>>>> 1def567c085d614d54d2cd9914c95fb14e59c30c
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 846, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+=======
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+>>>>>>> 1def567c085d614d54d2cd9914c95fb14e59c30c
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
+    private void pwd_contraseniaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwd_contraseniaMouseClicked
+        pwd_contrasenia.setText("");
+        pwd_contrasenia.setForeground(Color.BLACK);
+    }//GEN-LAST:event_pwd_contraseniaMouseClicked
+
+=======
+>>>>>>> 1def567c085d614d54d2cd9914c95fb14e59c30c
     private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_emailActionPerformed
 
+<<<<<<< HEAD
+    private void emailMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailMouseReleased
+
+    }//GEN-LAST:event_emailMouseReleased
+
+    private void emailMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailMousePressed
+
+    }//GEN-LAST:event_emailMousePressed
+
+    private void emailMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailMouseExited
+
+    }//GEN-LAST:event_emailMouseExited
+
+=======
+>>>>>>> 1def567c085d614d54d2cd9914c95fb14e59c30c
     private void emailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailMouseClicked
         email.setText("");
         email.setForeground(Color.BLACK);
     }//GEN-LAST:event_emailMouseClicked
+<<<<<<< HEAD
+=======
 
     private void emailMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailMouseExited
 
@@ -270,6 +335,7 @@ public class InicioSesion extends javax.swing.JFrame {
     private void emailMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailMouseReleased
 
     }//GEN-LAST:event_emailMouseReleased
+>>>>>>> 1def567c085d614d54d2cd9914c95fb14e59c30c
 
     /**
      * @param args the command line arguments
@@ -297,6 +363,7 @@ public class InicioSesion extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(InicioSesion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -317,7 +384,11 @@ public class InicioSesion extends javax.swing.JFrame {
     private vista.PanelRound panelRound1;
     private vista.PanelRound panelRound2;
     private vista.PanelRound panelRound3;
+<<<<<<< HEAD
+    private vista.PasswordField pwd_contrasenia;
+=======
     private vista.PasswordField passwordField2;
+>>>>>>> 1def567c085d614d54d2cd9914c95fb14e59c30c
     private vista.RoundButton roundButton1;
     // End of variables declaration//GEN-END:variables
 }
