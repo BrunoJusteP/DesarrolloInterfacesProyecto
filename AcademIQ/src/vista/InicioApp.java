@@ -38,12 +38,12 @@ public class InicioApp extends javax.swing.JDialog {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         roundButton5 = new vista.RoundButton();
-        roundButton6 = new vista.RoundButton();
-        roundButton7 = new vista.RoundButton();
-        roundButton8 = new vista.RoundButton();
-        roundButton9 = new vista.RoundButton();
-        roundButton10 = new vista.RoundButton();
-        roundButton11 = new vista.RoundButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1920, 1080));
@@ -145,71 +145,35 @@ public class InicioApp extends javax.swing.JDialog {
         jPanel2.add(roundButton5);
         roundButton5.setBounds(800, 30, 90, 90);
 
-        roundButton6.setBackground(new java.awt.Color(0, 98, 173));
-        roundButton6.setForeground(new java.awt.Color(255, 255, 255));
-        roundButton6.setRound(35);
-        roundButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                roundButton6ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(roundButton6);
-        roundButton6.setBounds(600, 150, 290, 200);
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ProgramacionMultimedia.png"))); // NOI18N
+        jButton1.setBorder(null);
+        jPanel2.add(jButton1);
+        jButton1.setBounds(620, 140, 270, 210);
 
-        roundButton7.setBackground(new java.awt.Color(0, 98, 173));
-        roundButton7.setForeground(new java.awt.Color(255, 255, 255));
-        roundButton7.setRound(35);
-        roundButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                roundButton7ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(roundButton7);
-        roundButton7.setBounds(20, 150, 290, 200);
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/accesoADatos.png"))); // NOI18N
+        jButton2.setBorder(null);
+        jPanel2.add(jButton2);
+        jButton2.setBounds(20, 140, 270, 210);
 
-        roundButton8.setBackground(new java.awt.Color(0, 98, 173));
-        roundButton8.setForeground(new java.awt.Color(255, 255, 255));
-        roundButton8.setRound(35);
-        roundButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                roundButton8ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(roundButton8);
-        roundButton8.setBounds(310, 150, 290, 200);
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/DesarrolloInterfaces.png"))); // NOI18N
+        jButton3.setBorder(null);
+        jPanel2.add(jButton3);
+        jButton3.setBounds(320, 140, 270, 210);
 
-        roundButton9.setBackground(new java.awt.Color(0, 98, 173));
-        roundButton9.setForeground(new java.awt.Color(255, 255, 255));
-        roundButton9.setRound(35);
-        roundButton9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                roundButton9ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(roundButton9);
-        roundButton9.setBounds(20, 380, 290, 200);
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/SistemaGestion.png"))); // NOI18N
+        jButton4.setBorder(null);
+        jPanel2.add(jButton4);
+        jButton4.setBounds(20, 370, 270, 210);
 
-        roundButton10.setBackground(new java.awt.Color(0, 98, 173));
-        roundButton10.setForeground(new java.awt.Color(255, 255, 255));
-        roundButton10.setRound(35);
-        roundButton10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                roundButton10ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(roundButton10);
-        roundButton10.setBounds(310, 380, 290, 200);
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/PSP.png"))); // NOI18N
+        jButton5.setBorder(null);
+        jPanel2.add(jButton5);
+        jButton5.setBounds(320, 370, 270, 210);
 
-        roundButton11.setBackground(new java.awt.Color(0, 98, 173));
-        roundButton11.setForeground(new java.awt.Color(255, 255, 255));
-        roundButton11.setRound(35);
-        roundButton11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                roundButton11ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(roundButton11);
-        roundButton11.setBounds(600, 380, 290, 200);
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Empresa.png"))); // NOI18N
+        jButton6.setBorder(null);
+        jPanel2.add(jButton6);
+        jButton6.setBounds(620, 370, 270, 210);
 
         getContentPane().add(jPanel2);
         jPanel2.setBounds(350, 0, 930, 830);
@@ -217,47 +181,23 @@ public class InicioApp extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void roundButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roundButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_roundButton6ActionPerformed
-
-    private void roundButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roundButton7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_roundButton7ActionPerformed
-
-    private void roundButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roundButton8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_roundButton8ActionPerformed
-
-    private void roundButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roundButton9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_roundButton9ActionPerformed
-
-    private void roundButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roundButton10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_roundButton10ActionPerformed
-
-    private void roundButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roundButton11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_roundButton11ActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel img_logo1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private vista.RoundButton roundButton1;
-    private vista.RoundButton roundButton10;
-    private vista.RoundButton roundButton11;
     private vista.RoundButton roundButton2;
     private vista.RoundButton roundButton3;
     private vista.RoundButton roundButton4;
     private vista.RoundButton roundButton5;
-    private vista.RoundButton roundButton6;
-    private vista.RoundButton roundButton7;
-    private vista.RoundButton roundButton8;
-    private vista.RoundButton roundButton9;
     // End of variables declaration//GEN-END:variables
 }
