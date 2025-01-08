@@ -38,14 +38,17 @@ public class AccesoADatos extends javax.swing.JDialog {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         roundButton5 = new vista.RoundButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        roundButton6 = new vista.RoundButton();
+        roundButton7 = new vista.RoundButton();
+        roundButton8 = new vista.RoundButton();
+        roundButton9 = new vista.RoundButton();
+        roundButton10 = new vista.RoundButton();
+        roundButton11 = new vista.RoundButton();
+        roundButton12 = new vista.RoundButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1280, 832));
+        setResizable(false);
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(0, 98, 173));
@@ -133,7 +136,7 @@ public class AccesoADatos extends javax.swing.JDialog {
         jPanel2.setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel2.setText("Asignatura");
+        jLabel2.setText("Acceso A Datos");
         jPanel2.add(jLabel2);
         jLabel2.setBounds(40, 50, 622, 72);
 
@@ -143,35 +146,73 @@ public class AccesoADatos extends javax.swing.JDialog {
         jPanel2.add(roundButton5);
         roundButton5.setBounds(800, 30, 90, 90);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ProgramacionMultimedia.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jPanel2.add(jButton1);
-        jButton1.setBounds(620, 140, 270, 210);
+        roundButton6.setBackground(new java.awt.Color(0, 98, 173));
+        roundButton6.setForeground(new java.awt.Color(255, 255, 255));
+        roundButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CalendarioIcono.png"))); // NOI18N
+        roundButton6.setText("  CALENDARIO");
+        roundButton6.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        roundButton6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        roundButton6.setRound(15);
+        jPanel2.add(roundButton6);
+        roundButton6.setBounds(30, 620, 870, 80);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/accesoADatos.png"))); // NOI18N
-        jButton2.setBorder(null);
-        jPanel2.add(jButton2);
-        jButton2.setBounds(20, 140, 270, 210);
+        roundButton7.setBackground(new java.awt.Color(0, 98, 173));
+        roundButton7.setForeground(new java.awt.Color(255, 255, 255));
+        roundButton7.setText("Tema 1: Fundamentos de la programacion");
+        roundButton7.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        roundButton7.setRound(15);
+        jPanel2.add(roundButton7);
+        roundButton7.setBounds(30, 140, 870, 80);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/DesarrolloInterfaces.png"))); // NOI18N
-        jButton3.setBorder(null);
-        jPanel2.add(jButton3);
-        jButton3.setBounds(320, 140, 270, 210);
+        roundButton8.setBackground(new java.awt.Color(0, 98, 173));
+        roundButton8.setForeground(new java.awt.Color(255, 255, 255));
+        roundButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CalendarioIcono.png"))); // NOI18N
+        roundButton8.setText("  CALENDARIO");
+        roundButton8.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        roundButton8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        roundButton8.setRound(15);
+        jPanel2.add(roundButton8);
+        roundButton8.setBounds(30, 220, 870, 80);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/SistemaGestion.png"))); // NOI18N
-        jButton4.setBorder(null);
-        jPanel2.add(jButton4);
-        jButton4.setBounds(20, 370, 270, 210);
+        roundButton9.setBackground(new java.awt.Color(0, 98, 173));
+        roundButton9.setForeground(new java.awt.Color(255, 255, 255));
+        roundButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CalendarioIcono.png"))); // NOI18N
+        roundButton9.setText("  CALENDARIO");
+        roundButton9.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        roundButton9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        roundButton9.setRound(15);
+        jPanel2.add(roundButton9);
+        roundButton9.setBounds(30, 300, 870, 80);
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/PSP.png"))); // NOI18N
-        jButton5.setBorder(null);
-        jPanel2.add(jButton5);
-        jButton5.setBounds(320, 370, 270, 210);
+        roundButton10.setBackground(new java.awt.Color(0, 98, 173));
+        roundButton10.setForeground(new java.awt.Color(255, 255, 255));
+        roundButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CalendarioIcono.png"))); // NOI18N
+        roundButton10.setText("  CALENDARIO");
+        roundButton10.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        roundButton10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        roundButton10.setRound(15);
+        jPanel2.add(roundButton10);
+        roundButton10.setBounds(30, 380, 870, 80);
 
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Empresa.png"))); // NOI18N
-        jButton6.setBorder(null);
-        jPanel2.add(jButton6);
-        jButton6.setBounds(620, 370, 270, 210);
+        roundButton11.setBackground(new java.awt.Color(0, 98, 173));
+        roundButton11.setForeground(new java.awt.Color(255, 255, 255));
+        roundButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CalendarioIcono.png"))); // NOI18N
+        roundButton11.setText("  CALENDARIO");
+        roundButton11.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        roundButton11.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        roundButton11.setRound(15);
+        jPanel2.add(roundButton11);
+        roundButton11.setBounds(30, 460, 870, 80);
+
+        roundButton12.setBackground(new java.awt.Color(0, 98, 173));
+        roundButton12.setForeground(new java.awt.Color(255, 255, 255));
+        roundButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CalendarioIcono.png"))); // NOI18N
+        roundButton12.setText("  CALENDARIO");
+        roundButton12.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        roundButton12.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        roundButton12.setRound(15);
+        jPanel2.add(roundButton12);
+        roundButton12.setBounds(30, 540, 870, 80);
 
         getContentPane().add(jPanel2);
         jPanel2.setBounds(350, 0, 930, 830);
@@ -223,21 +264,22 @@ public class AccesoADatos extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel img_logo1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private vista.RoundButton roundButton1;
+    private vista.RoundButton roundButton10;
+    private vista.RoundButton roundButton11;
+    private vista.RoundButton roundButton12;
     private vista.RoundButton roundButton2;
     private vista.RoundButton roundButton3;
     private vista.RoundButton roundButton4;
     private vista.RoundButton roundButton5;
+    private vista.RoundButton roundButton6;
+    private vista.RoundButton roundButton7;
+    private vista.RoundButton roundButton8;
+    private vista.RoundButton roundButton9;
     // End of variables declaration//GEN-END:variables
 }
