@@ -4,6 +4,13 @@
  */
 package vista;
 
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Alumno
@@ -16,8 +23,62 @@ public class AccesoADatos extends javax.swing.JDialog {
     public AccesoADatos(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        roundButton7.addActionListener(e -> {
+            chooseAndDownloadFile("https://drive.google.com/uc?export=download&id=1Vmr0SEsMenTJ1uKDHXgqTfCYDlIQOAkU");
+        });
     }
 
+    private void chooseAndDownloadFile(String fileURL) {
+        // Abrir un JFileChooser para seleccionar el archivo de destino
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setDialogTitle("Seleccione dónde guardar el archivo");
+        fileChooser.setApproveButtonText("Guardar");
+        
+        // Permitir solo seleccionar archivos para guardar
+        fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+
+        int userSelection = fileChooser.showSaveDialog(this);
+
+        if (userSelection == JFileChooser.APPROVE_OPTION) {
+            // Obtener la ruta seleccionada por el usuario
+            String saveFilePath = fileChooser.getSelectedFile().getAbsolutePath();
+            downloadFile(fileURL, saveFilePath);
+        } else {
+            JOptionPane.showMessageDialog(this, "Operación cancelada.");
+        }
+    }
+    
+    private void downloadFile(String fileURL, String saveFilePath) {
+        try {
+            URL url = new URL(fileURL);
+            HttpURLConnection httpConnection = (HttpURLConnection) url.openConnection();
+            int responseCode = httpConnection.getResponseCode();
+
+            if (responseCode == HttpURLConnection.HTTP_OK) {
+                InputStream inputStream = httpConnection.getInputStream();
+                FileOutputStream outputStream = new FileOutputStream(saveFilePath);
+
+                byte[] buffer = new byte[4096];
+                int bytesRead;
+
+                while ((bytesRead = inputStream.read(buffer)) != -1) {
+                    outputStream.write(buffer, 0, bytesRead);
+                }
+
+                outputStream.close();
+                inputStream.close();
+                JOptionPane.showMessageDialog(this, "Archivo descargado con éxito: " + saveFilePath);
+            } else {
+                JOptionPane.showMessageDialog(this, "Error al descargar el archivo: Código " + responseCode);
+            }
+
+            httpConnection.disconnect();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Ocurrió un error: " + ex.getMessage());
+        }
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -38,13 +99,10 @@ public class AccesoADatos extends javax.swing.JDialog {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         roundButton5 = new vista.RoundButton();
-        roundButton6 = new vista.RoundButton();
         roundButton7 = new vista.RoundButton();
         roundButton8 = new vista.RoundButton();
         roundButton9 = new vista.RoundButton();
         roundButton10 = new vista.RoundButton();
-        roundButton11 = new vista.RoundButton();
-        roundButton12 = new vista.RoundButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1280, 832));
@@ -146,16 +204,6 @@ public class AccesoADatos extends javax.swing.JDialog {
         jPanel2.add(roundButton5);
         roundButton5.setBounds(800, 30, 90, 90);
 
-        roundButton6.setBackground(new java.awt.Color(0, 98, 173));
-        roundButton6.setForeground(new java.awt.Color(255, 255, 255));
-        roundButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CalendarioIcono.png"))); // NOI18N
-        roundButton6.setText("  CALENDARIO");
-        roundButton6.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        roundButton6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        roundButton6.setRound(15);
-        jPanel2.add(roundButton6);
-        roundButton6.setBounds(30, 620, 870, 80);
-
         roundButton7.setBackground(new java.awt.Color(0, 98, 173));
         roundButton7.setForeground(new java.awt.Color(255, 255, 255));
         roundButton7.setText("Tema 1: Fundamentos de la programacion");
@@ -164,103 +212,35 @@ public class AccesoADatos extends javax.swing.JDialog {
         jPanel2.add(roundButton7);
         roundButton7.setBounds(30, 140, 870, 80);
 
-        roundButton8.setBackground(new java.awt.Color(0, 98, 173));
+        roundButton8.setBackground(new java.awt.Color(0, 182, 246));
         roundButton8.setForeground(new java.awt.Color(255, 255, 255));
-        roundButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CalendarioIcono.png"))); // NOI18N
-        roundButton8.setText("  CALENDARIO");
+        roundButton8.setText("Tema 2: Manejo de Ficheros");
         roundButton8.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        roundButton8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         roundButton8.setRound(15);
         jPanel2.add(roundButton8);
         roundButton8.setBounds(30, 220, 870, 80);
 
-        roundButton9.setBackground(new java.awt.Color(0, 98, 173));
+        roundButton9.setBackground(new java.awt.Color(0, 182, 246));
         roundButton9.setForeground(new java.awt.Color(255, 255, 255));
-        roundButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CalendarioIcono.png"))); // NOI18N
-        roundButton9.setText("  CALENDARIO");
+        roundButton9.setText("Tema 3: Conectores a Sistemas Gestores de Bases de datos");
         roundButton9.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        roundButton9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         roundButton9.setRound(15);
         jPanel2.add(roundButton9);
         roundButton9.setBounds(30, 300, 870, 80);
 
-        roundButton10.setBackground(new java.awt.Color(0, 98, 173));
+        roundButton10.setBackground(new java.awt.Color(0, 182, 246));
         roundButton10.setForeground(new java.awt.Color(255, 255, 255));
-        roundButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CalendarioIcono.png"))); // NOI18N
-        roundButton10.setText("  CALENDARIO");
+        roundButton10.setText("Tema 4: Generacion de servicios de acceso a datos");
         roundButton10.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        roundButton10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         roundButton10.setRound(15);
         jPanel2.add(roundButton10);
         roundButton10.setBounds(30, 380, 870, 80);
-
-        roundButton11.setBackground(new java.awt.Color(0, 98, 173));
-        roundButton11.setForeground(new java.awt.Color(255, 255, 255));
-        roundButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CalendarioIcono.png"))); // NOI18N
-        roundButton11.setText("  CALENDARIO");
-        roundButton11.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        roundButton11.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        roundButton11.setRound(15);
-        jPanel2.add(roundButton11);
-        roundButton11.setBounds(30, 460, 870, 80);
-
-        roundButton12.setBackground(new java.awt.Color(0, 98, 173));
-        roundButton12.setForeground(new java.awt.Color(255, 255, 255));
-        roundButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CalendarioIcono.png"))); // NOI18N
-        roundButton12.setText("  CALENDARIO");
-        roundButton12.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        roundButton12.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        roundButton12.setRound(15);
-        jPanel2.add(roundButton12);
-        roundButton12.setBounds(30, 540, 870, 80);
 
         getContentPane().add(jPanel2);
         jPanel2.setBounds(350, 0, 930, 830);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AccesoADatos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AccesoADatos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AccesoADatos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AccesoADatos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the dialog */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                AccesoADatos dialog = new AccesoADatos(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel img_logo1;
@@ -271,13 +251,10 @@ public class AccesoADatos extends javax.swing.JDialog {
     private javax.swing.JSeparator jSeparator1;
     private vista.RoundButton roundButton1;
     private vista.RoundButton roundButton10;
-    private vista.RoundButton roundButton11;
-    private vista.RoundButton roundButton12;
     private vista.RoundButton roundButton2;
     private vista.RoundButton roundButton3;
     private vista.RoundButton roundButton4;
     private vista.RoundButton roundButton5;
-    private vista.RoundButton roundButton6;
     private vista.RoundButton roundButton7;
     private vista.RoundButton roundButton8;
     private vista.RoundButton roundButton9;

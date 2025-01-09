@@ -82,6 +82,11 @@ public class InicioSesion extends javax.swing.JFrame {
         passwordField2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         passwordField2.setText("contraseña");
         passwordField2.setRound(15);
+        passwordField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passwordField2ActionPerformed(evt);
+            }
+        });
 
         roundButton1.setForeground(new java.awt.Color(0, 98, 173));
         roundButton1.setText("Iniciar Sesion");
@@ -177,6 +182,10 @@ public class InicioSesion extends javax.swing.JFrame {
         email.setText("");
         email.setForeground(Color.BLACK);
     }//GEN-LAST:event_emailMouseClicked
+
+    private void passwordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordField2ActionPerformed
 
     /**
      * @param args the command line arguments
