@@ -168,9 +168,12 @@
                 <Property name="text" type="java.lang.String" value="contrase&#xf1;a"/>
                 <Property name="round" type="int" value="15"/>
               </Properties>
+<<<<<<< HEAD
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="passwordField2ActionPerformed"/>
               </Events>
+=======
+>>>>>>> 0e40b0815cddef218e2e49c125cd784eb736e3e2
             </Component>
             <Component class="vista.RoundButton" name="roundButton1">
               <Properties>

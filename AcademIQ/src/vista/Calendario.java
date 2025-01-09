@@ -47,8 +47,9 @@ public class Calendario extends javax.swing.JDialog {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("AcademIQ");
 
-        roundButton1.setForeground(new java.awt.Color(0, 98, 173));
-        roundButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/HomeIcono.png"))); // NOI18N
+        roundButton1.setBackground(new java.awt.Color(0, 98, 173));
+        roundButton1.setForeground(new java.awt.Color(255, 255, 255));
+        roundButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/home_blanco.png"))); // NOI18N
         roundButton1.setText("  INICIO");
         roundButton1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         roundButton1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -71,7 +72,7 @@ public class Calendario extends javax.swing.JDialog {
         roundButton3.setRound(15);
 
         roundButton4.setForeground(new java.awt.Color(0, 98, 173));
-        roundButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CalendarioIcono.png"))); // NOI18N
+        roundButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/calendario_color.png"))); // NOI18N
         roundButton4.setText("  CALENDARIO");
         roundButton4.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         roundButton4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
