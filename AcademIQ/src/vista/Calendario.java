@@ -4,6 +4,8 @@
  */
 package vista;
 
+import java.awt.Color;
+
 /**
  *
  * @author Alumno
@@ -31,7 +33,7 @@ public class Calendario extends javax.swing.JDialog {
         img_logo1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
-        roundButton1 = new vista.RoundButton();
+        btn_inicio = new vista.RoundButton();
         roundButton2 = new vista.RoundButton();
         roundButton3 = new vista.RoundButton();
         roundButton4 = new vista.RoundButton();
@@ -47,13 +49,18 @@ public class Calendario extends javax.swing.JDialog {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("AcademIQ");
 
-        roundButton1.setBackground(new java.awt.Color(0, 98, 173));
-        roundButton1.setForeground(new java.awt.Color(255, 255, 255));
-        roundButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/home_blanco.png"))); // NOI18N
-        roundButton1.setText("  INICIO");
-        roundButton1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        roundButton1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        roundButton1.setRound(15);
+        btn_inicio.setBackground(new java.awt.Color(0, 98, 173));
+        btn_inicio.setForeground(new java.awt.Color(255, 255, 255));
+        btn_inicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/home_blanco.png"))); // NOI18N
+        btn_inicio.setText("  INICIO");
+        btn_inicio.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btn_inicio.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_inicio.setRound(15);
+        btn_inicio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_inicioMouseEntered(evt);
+            }
+        });
 
         roundButton2.setBackground(new java.awt.Color(0, 98, 173));
         roundButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -95,7 +102,7 @@ public class Calendario extends javax.swing.JDialog {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE))
                     .addComponent(jSeparator1)
-                    .addComponent(roundButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_inicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(roundButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(roundButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(roundButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -111,14 +118,14 @@ public class Calendario extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(roundButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_inicio, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(roundButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(roundButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(roundButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(481, 481, 481))
+                .addGap(484, 484, 484))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -143,14 +150,19 @@ public class Calendario extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_roundButton4ActionPerformed
 
+    private void btn_inicioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_inicioMouseEntered
+        btn_inicio.setBackground(Color.WHITE);
+        btn_inicio.setForeground(new Color(0, 98, 173));
+    }//GEN-LAST:event_btn_inicioMouseEntered
+
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private vista.RoundButton btn_inicio;
     private javax.swing.JLabel img_logo1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
-    private vista.RoundButton roundButton1;
     private vista.RoundButton roundButton2;
     private vista.RoundButton roundButton3;
     private vista.RoundButton roundButton4;
