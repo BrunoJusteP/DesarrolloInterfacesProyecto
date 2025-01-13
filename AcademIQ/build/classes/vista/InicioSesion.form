@@ -100,9 +100,27 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
+<<<<<<< HEAD
                       <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
                       <Component id="roundButton1" min="-2" pref="248" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
+=======
+                      <EmptySpace pref="42" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="txt_email" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="pwd_contrasenia" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="btn_iniciarSesion" min="-2" pref="248" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+>>>>>>> abafeb239bbc9dc49ccac61858c218d6a5ffe4ad
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace pref="42" max="32767" attributes="0"/>
@@ -123,12 +141,21 @@
                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+<<<<<<< HEAD
                       <Component id="email" min="-2" pref="60" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                       <Component id="pwd_contrasenia" min="-2" pref="60" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                       <Component id="roundButton1" min="-2" pref="64" max="-2" attributes="0"/>
                       <EmptySpace pref="46" max="32767" attributes="0"/>
+=======
+                      <Component id="txt_email" min="-2" pref="60" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                      <Component id="pwd_contrasenia" min="-2" pref="60" max="-2" attributes="0"/>
+                      <EmptySpace pref="60" max="32767" attributes="0"/>
+                      <Component id="btn_iniciarSesion" min="-2" pref="64" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+>>>>>>> abafeb239bbc9dc49ccac61858c218d6a5ffe4ad
                   </Group>
               </Group>
             </DimensionLayout>
@@ -145,7 +172,7 @@
                 <Property name="text" type="java.lang.String" value="Inicia Sesi&#xf3;n en AcademIQ"/>
               </Properties>
             </Component>
-            <Component class="vista.RoundTextField" name="email">
+            <Component class="vista.RoundTextField" name="txt_email">
               <Properties>
                 <Property name="text" type="java.lang.String" value="E-mail"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -153,14 +180,33 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="emailMouseClicked"/>
-                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="emailMouseExited"/>
-                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="emailMousePressed"/>
-                <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="emailMouseReleased"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="emailActionPerformed"/>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txt_emailMouseClicked"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txt_emailMouseExited"/>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txt_emailMousePressed"/>
+                <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txt_emailMouseReleased"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_emailActionPerformed"/>
               </Events>
             </Component>
+<<<<<<< HEAD
             <Component class="vista.RoundButton" name="roundButton1">
+=======
+            <Component class="vista.PasswordField" name="pwd_contrasenia">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                    <EmptyBorder/>
+                  </Border>
+                </Property>
+                <Property name="text" type="java.lang.String" value="contrase&#xf1;a"/>
+                <Property name="round" type="int" value="15"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pwd_contraseniaMouseClicked"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pwd_contraseniaActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="vista.RoundButton" name="btn_iniciarSesion">
+>>>>>>> abafeb239bbc9dc49ccac61858c218d6a5ffe4ad
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ad" green="62" red="0" type="rgb"/>
@@ -170,6 +216,11 @@
                   <Font name="Segoe UI" size="24" style="0"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_iniciarSesionMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_iniciarSesionMouseExited"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_iniciarSesionActionPerformed"/>
+              </Events>
             </Component>
             <Component class="vista.PasswordField" name="pwd_contrasenia">
               <Properties>

@@ -147,31 +147,38 @@ public class InicioApp extends javax.swing.JDialog {
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ProgramacionMultimedia.png"))); // NOI18N
         jButton1.setBorder(null);
+        jButton1.setContentAreaFilled(false);
         jPanel2.add(jButton1);
         jButton1.setBounds(620, 140, 270, 210);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/accesoADatos.png"))); // NOI18N
         jButton2.setBorder(null);
+        jButton2.setContentAreaFilled(false);
         jPanel2.add(jButton2);
         jButton2.setBounds(20, 140, 270, 210);
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/DesarrolloInterfaces.png"))); // NOI18N
         jButton3.setBorder(null);
+        jButton3.setBorderPainted(false);
+        jButton3.setContentAreaFilled(false);
         jPanel2.add(jButton3);
         jButton3.setBounds(320, 140, 270, 210);
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/SistemaGestion.png"))); // NOI18N
         jButton4.setBorder(null);
+        jButton4.setContentAreaFilled(false);
         jPanel2.add(jButton4);
         jButton4.setBounds(20, 370, 270, 210);
 
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/PSP.png"))); // NOI18N
         jButton5.setBorder(null);
+        jButton5.setContentAreaFilled(false);
         jPanel2.add(jButton5);
         jButton5.setBounds(320, 370, 270, 210);
 
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Empresa.png"))); // NOI18N
         jButton6.setBorder(null);
+        jButton6.setContentAreaFilled(false);
         jPanel2.add(jButton6);
         jButton6.setBounds(620, 370, 270, 210);
 
