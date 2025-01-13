@@ -34,8 +34,8 @@ public class InicioSesion extends javax.swing.JFrame {
         panelInicio = new vista.PanelRound();
         jLabel1 = new javax.swing.JLabel();
         email = new vista.RoundTextField();
-        passwordField2 = new vista.PasswordField();
         roundButton1 = new vista.RoundButton();
+        pwd_contrasenia = new vista.PasswordField();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -79,34 +79,28 @@ public class InicioSesion extends javax.swing.JFrame {
             }
         });
 
-        passwordField2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        passwordField2.setText("contraseña");
-        passwordField2.setRound(15);
-        passwordField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordField2ActionPerformed(evt);
-            }
-        });
-
         roundButton1.setForeground(new java.awt.Color(0, 98, 173));
         roundButton1.setText("Iniciar Sesion");
         roundButton1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+
+        pwd_contrasenia.setText("passwordField1");
 
         javax.swing.GroupLayout panelInicioLayout = new javax.swing.GroupLayout(panelInicio);
         panelInicio.setLayout(panelInicioLayout);
         panelInicioLayout.setHorizontalGroup(
             panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInicioLayout.createSequentialGroup()
-                .addContainerGap(42, Short.MAX_VALUE)
-                .addGroup(panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(email, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(passwordField2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(33, 33, 33))
             .addGroup(panelInicioLayout.createSequentialGroup()
                 .addGap(131, 131, 131)
                 .addComponent(roundButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInicioLayout.createSequentialGroup()
+                .addContainerGap(42, Short.MAX_VALUE)
+                .addGroup(panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(pwd_contrasenia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(email, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(33, 33, 33))
         );
         panelInicioLayout.setVerticalGroup(
             panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,9 +109,9 @@ public class InicioSesion extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(51, 51, 51)
                 .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47)
-                .addComponent(passwordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(62, 62, 62)
+                .addGap(52, 52, 52)
+                .addComponent(pwd_contrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57)
                 .addComponent(roundButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(46, Short.MAX_VALUE))
         );
@@ -183,10 +177,6 @@ public class InicioSesion extends javax.swing.JFrame {
         email.setForeground(Color.BLACK);
     }//GEN-LAST:event_emailMouseClicked
 
-    private void passwordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passwordField2ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -228,7 +218,7 @@ public class InicioSesion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private vista.PanelRound panelInicio;
-    private vista.PasswordField passwordField2;
+    private vista.PasswordField pwd_contrasenia;
     private vista.RoundButton roundButton1;
     // End of variables declaration//GEN-END:variables
 }

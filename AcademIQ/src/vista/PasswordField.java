@@ -29,13 +29,14 @@ public class PasswordField extends JPasswordField {
         this.round = round;
     }
 
-    private int round = 10;
+    private int round = 15;
 
     public PasswordField() {
         //setUI(new TextUI());
         setOpaque(false);
         setForeground(new Color(80, 80, 80));
         setSelectedTextColor(new Color(255, 255, 255));
+        setBorder(new EmptyBorder(10, 12, 15, 12));
         setSelectionColor(new Color(133, 209, 255));
         setBackground(new Color(255, 255, 255));
     }

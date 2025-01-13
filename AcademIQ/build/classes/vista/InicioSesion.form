@@ -99,19 +99,21 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="42" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="email" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="passwordField2" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
                       <Component id="roundButton1" min="-2" pref="248" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace pref="42" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="pwd_contrasenia" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="email" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -122,9 +124,9 @@
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                       <Component id="email" min="-2" pref="60" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                      <Component id="passwordField2" min="-2" pref="60" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                      <Component id="pwd_contrasenia" min="-2" pref="60" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                       <Component id="roundButton1" min="-2" pref="64" max="-2" attributes="0"/>
                       <EmptySpace pref="46" max="32767" attributes="0"/>
                   </Group>
@@ -158,23 +160,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="emailActionPerformed"/>
               </Events>
             </Component>
-            <Component class="vista.PasswordField" name="passwordField2">
-              <Properties>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
-                    <EmptyBorder/>
-                  </Border>
-                </Property>
-                <Property name="text" type="java.lang.String" value="contrase&#xf1;a"/>
-                <Property name="round" type="int" value="15"/>
-              </Properties>
-<<<<<<< HEAD
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="passwordField2ActionPerformed"/>
-              </Events>
-=======
->>>>>>> 0e40b0815cddef218e2e49c125cd784eb736e3e2
-            </Component>
             <Component class="vista.RoundButton" name="roundButton1">
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -184,6 +169,11 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="24" style="0"/>
                 </Property>
+              </Properties>
+            </Component>
+            <Component class="vista.PasswordField" name="pwd_contrasenia">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="passwordField1"/>
               </Properties>
             </Component>
           </SubComponents>
