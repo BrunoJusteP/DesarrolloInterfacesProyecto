@@ -4,6 +4,9 @@
  */
 package vista;
 
+import java.awt.Color;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Alumno
@@ -31,10 +34,10 @@ public class Calendario extends javax.swing.JDialog {
         img_logo1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
-        roundButton1 = new vista.RoundButton();
-        roundButton2 = new vista.RoundButton();
-        roundButton3 = new vista.RoundButton();
-        roundButton4 = new vista.RoundButton();
+        btn_inicio = new vista.RoundButton();
+        btn_notas = new vista.RoundButton();
+        btn_ajustes = new vista.RoundButton();
+        btn_calendario = new vista.RoundButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -47,39 +50,68 @@ public class Calendario extends javax.swing.JDialog {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("AcademIQ");
 
-        roundButton1.setBackground(new java.awt.Color(0, 98, 173));
-        roundButton1.setForeground(new java.awt.Color(255, 255, 255));
-        roundButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/home_blanco.png"))); // NOI18N
-        roundButton1.setText("  INICIO");
-        roundButton1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        roundButton1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        roundButton1.setRound(15);
+        btn_inicio.setBackground(new java.awt.Color(0, 98, 173));
+        btn_inicio.setForeground(new java.awt.Color(255, 255, 255));
+        btn_inicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/home_blanco.png"))); // NOI18N
+        btn_inicio.setText("  INICIO");
+        btn_inicio.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btn_inicio.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_inicio.setRound(15);
+        btn_inicio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_inicioMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_inicioMouseExited(evt);
+            }
+        });
 
-        roundButton2.setBackground(new java.awt.Color(0, 98, 173));
-        roundButton2.setForeground(new java.awt.Color(255, 255, 255));
-        roundButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/NotasIcono.png"))); // NOI18N
-        roundButton2.setText("  NOTAS");
-        roundButton2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        roundButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        roundButton2.setRound(15);
+        btn_notas.setBackground(new java.awt.Color(0, 98, 173));
+        btn_notas.setForeground(new java.awt.Color(255, 255, 255));
+        btn_notas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/NotasIcono.png"))); // NOI18N
+        btn_notas.setText("  NOTAS");
+        btn_notas.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btn_notas.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_notas.setRound(15);
+        btn_notas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_notasMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_notasMouseExited(evt);
+            }
+        });
 
-        roundButton3.setBackground(new java.awt.Color(0, 98, 173));
-        roundButton3.setForeground(new java.awt.Color(255, 255, 255));
-        roundButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/AjustesIcono.png"))); // NOI18N
-        roundButton3.setText("  AJUSTES");
-        roundButton3.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        roundButton3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        roundButton3.setRound(15);
+        btn_ajustes.setBackground(new java.awt.Color(0, 98, 173));
+        btn_ajustes.setForeground(new java.awt.Color(255, 255, 255));
+        btn_ajustes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/AjustesIcono.png"))); // NOI18N
+        btn_ajustes.setText("  AJUSTES");
+        btn_ajustes.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btn_ajustes.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_ajustes.setRound(15);
+        btn_ajustes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_ajustesMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_ajustesMouseExited(evt);
+            }
+        });
 
-        roundButton4.setForeground(new java.awt.Color(0, 98, 173));
-        roundButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/calendario_color.png"))); // NOI18N
-        roundButton4.setText("  CALENDARIO");
-        roundButton4.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        roundButton4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        roundButton4.setRound(15);
-        roundButton4.addActionListener(new java.awt.event.ActionListener() {
+        btn_calendario.setForeground(new java.awt.Color(0, 98, 173));
+        btn_calendario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/calendario_color.png"))); // NOI18N
+        btn_calendario.setText("  CALENDARIO");
+        btn_calendario.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btn_calendario.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_calendario.setRound(15);
+        btn_calendario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_calendarioMouseEntered(evt);
+            }
+        });
+        btn_calendario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                roundButton4ActionPerformed(evt);
+                btn_calendarioActionPerformed(evt);
             }
         });
 
@@ -95,10 +127,10 @@ public class Calendario extends javax.swing.JDialog {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE))
                     .addComponent(jSeparator1)
-                    .addComponent(roundButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(roundButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(roundButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(roundButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btn_inicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_notas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_ajustes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_calendario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -111,14 +143,14 @@ public class Calendario extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(roundButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_inicio, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(roundButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_calendario, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(roundButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_notas, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(roundButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(481, 481, 481))
+                .addComponent(btn_ajustes, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(484, 484, 484))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -139,20 +171,60 @@ public class Calendario extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void roundButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roundButton4ActionPerformed
+    private void btn_calendarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_calendarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_roundButton4ActionPerformed
+    }//GEN-LAST:event_btn_calendarioActionPerformed
+
+    private void btn_inicioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_inicioMouseEntered
+        btn_inicio.setBackground(Color.WHITE);
+        btn_inicio.setForeground(new Color(0, 98, 173));
+        btn_inicio.setIcon(new ImageIcon(getClass().getResource("/imagenes/HomeIcono.png")));
+    }//GEN-LAST:event_btn_inicioMouseEntered
+
+    private void btn_inicioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_inicioMouseExited
+        btn_inicio.setBackground(new Color(0, 98, 173));
+        btn_inicio.setForeground(Color.WHITE);
+        btn_inicio.setIcon(new ImageIcon(getClass().getResource("/imagenes/home_blanco.png")));
+    }//GEN-LAST:event_btn_inicioMouseExited
+
+    private void btn_calendarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_calendarioMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_calendarioMouseEntered
+
+    private void btn_notasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_notasMouseEntered
+        btn_notas.setBackground(Color.WHITE);
+        btn_notas.setForeground(new Color(0, 98, 173));
+        btn_notas.setIcon(new ImageIcon(getClass().getResource("/imagenes/notas_color.png")));
+    }//GEN-LAST:event_btn_notasMouseEntered
+
+    private void btn_notasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_notasMouseExited
+        btn_notas.setBackground(new Color(0, 98, 173));
+        btn_notas.setForeground(Color.WHITE);
+        btn_notas.setIcon(new ImageIcon(getClass().getResource("/imagenes/NotasIcono.png")));
+    }//GEN-LAST:event_btn_notasMouseExited
+
+    private void btn_ajustesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ajustesMouseEntered
+        btn_ajustes.setBackground(Color.WHITE);
+        btn_ajustes.setForeground(new Color(0, 98, 173));
+        btn_ajustes.setIcon(new ImageIcon(getClass().getResource("/imagenes/ajustes_color.png")));
+    }//GEN-LAST:event_btn_ajustesMouseEntered
+
+    private void btn_ajustesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ajustesMouseExited
+        btn_ajustes.setBackground(new Color(0, 98, 173));
+        btn_ajustes.setForeground(Color.WHITE);
+        btn_ajustes.setIcon(new ImageIcon(getClass().getResource("/imagenes/AjustesIcono.png")));
+    }//GEN-LAST:event_btn_ajustesMouseExited
 
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private vista.RoundButton btn_ajustes;
+    private vista.RoundButton btn_calendario;
+    private vista.RoundButton btn_inicio;
+    private vista.RoundButton btn_notas;
     private javax.swing.JLabel img_logo1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
-    private vista.RoundButton roundButton1;
-    private vista.RoundButton roundButton2;
-    private vista.RoundButton roundButton3;
-    private vista.RoundButton roundButton4;
     // End of variables declaration//GEN-END:variables
 }

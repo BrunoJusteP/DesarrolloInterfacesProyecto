@@ -5,6 +5,8 @@
 package vista;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
+import javax.swing.Timer;
 
 /**
  *
@@ -33,9 +35,9 @@ public class InicioSesion extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         panelInicio = new vista.PanelRound();
         jLabel1 = new javax.swing.JLabel();
-        email = new vista.RoundTextField();
-        passwordField2 = new vista.PasswordField();
-        roundButton1 = new vista.RoundButton();
+        txt_email = new vista.RoundTextField();
+        pwd_contrasenia = new vista.PasswordField();
+        btn_iniciarSesion = new vista.RoundButton();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -57,56 +59,75 @@ public class InicioSesion extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Inicia Sesión en AcademIQ");
 
-        email.setText("E-mail");
-        email.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        email.addMouseListener(new java.awt.event.MouseAdapter() {
+        txt_email.setText("E-mail");
+        txt_email.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txt_email.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                emailMouseClicked(evt);
+                txt_emailMouseClicked(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                emailMouseExited(evt);
+                txt_emailMouseExited(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                emailMousePressed(evt);
+                txt_emailMousePressed(evt);
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                emailMouseReleased(evt);
+                txt_emailMouseReleased(evt);
             }
         });
-        email.addActionListener(new java.awt.event.ActionListener() {
+        txt_email.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailActionPerformed(evt);
+                txt_emailActionPerformed(evt);
             }
         });
 
-        passwordField2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        passwordField2.setText("contraseña");
-        passwordField2.setRound(15);
-        passwordField2.addActionListener(new java.awt.event.ActionListener() {
+        pwd_contrasenia.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        pwd_contrasenia.setText("contraseña");
+        pwd_contrasenia.setRound(15);
+        pwd_contrasenia.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pwd_contraseniaMouseClicked(evt);
+            }
+        });
+        pwd_contrasenia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordField2ActionPerformed(evt);
+                pwd_contraseniaActionPerformed(evt);
             }
         });
 
-        roundButton1.setForeground(new java.awt.Color(0, 98, 173));
-        roundButton1.setText("Iniciar Sesion");
-        roundButton1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btn_iniciarSesion.setForeground(new java.awt.Color(0, 98, 173));
+        btn_iniciarSesion.setText("Iniciar Sesion");
+        btn_iniciarSesion.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btn_iniciarSesion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_iniciarSesionMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_iniciarSesionMouseExited(evt);
+            }
+        });
+        btn_iniciarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_iniciarSesionActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelInicioLayout = new javax.swing.GroupLayout(panelInicio);
         panelInicio.setLayout(panelInicioLayout);
         panelInicioLayout.setHorizontalGroup(
             panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInicioLayout.createSequentialGroup()
-                .addContainerGap(42, Short.MAX_VALUE)
-                .addGroup(panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(email, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(passwordField2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(33, 33, 33))
             .addGroup(panelInicioLayout.createSequentialGroup()
-                .addGap(131, 131, 131)
-                .addComponent(roundButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE)
+                .addGroup(panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInicioLayout.createSequentialGroup()
+                        .addGroup(panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txt_email, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(pwd_contrasenia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(33, 33, 33))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInicioLayout.createSequentialGroup()
+                        .addComponent(btn_iniciarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(157, 157, 157))))
         );
         panelInicioLayout.setVerticalGroup(
             panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -114,12 +135,12 @@ public class InicioSesion extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addComponent(jLabel1)
                 .addGap(51, 51, 51)
-                .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txt_email, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47)
-                .addComponent(passwordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(62, 62, 62)
-                .addComponent(roundButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addComponent(pwd_contrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                .addComponent(btn_iniciarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48))
         );
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/inicioSesion.png"))); // NOI18N
@@ -162,30 +183,62 @@ public class InicioSesion extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
+    private void txt_emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_emailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailActionPerformed
+    }//GEN-LAST:event_txt_emailActionPerformed
 
-    private void emailMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailMouseReleased
+    private void txt_emailMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_emailMouseReleased
 
-    }//GEN-LAST:event_emailMouseReleased
+    }//GEN-LAST:event_txt_emailMouseReleased
 
-    private void emailMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailMousePressed
+    private void txt_emailMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_emailMousePressed
 
-    }//GEN-LAST:event_emailMousePressed
+    }//GEN-LAST:event_txt_emailMousePressed
 
-    private void emailMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailMouseExited
+    private void txt_emailMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_emailMouseExited
 
-    }//GEN-LAST:event_emailMouseExited
+    }//GEN-LAST:event_txt_emailMouseExited
 
-    private void emailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailMouseClicked
-        email.setText("");
-        email.setForeground(Color.BLACK);
-    }//GEN-LAST:event_emailMouseClicked
+    private void txt_emailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_emailMouseClicked
+        txt_email.setText("");
+        txt_email.setForeground(Color.BLACK);
+    }//GEN-LAST:event_txt_emailMouseClicked
 
-    private void passwordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passwordField2ActionPerformed
+    private void pwd_contraseniaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwd_contraseniaActionPerformed
+        
+    }//GEN-LAST:event_pwd_contraseniaActionPerformed
+
+    private void btn_iniciarSesionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_iniciarSesionMouseEntered
+        
+    }//GEN-LAST:event_btn_iniciarSesionMouseEntered
+
+    private void btn_iniciarSesionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_iniciarSesionMouseExited
+        
+    }//GEN-LAST:event_btn_iniciarSesionMouseExited
+
+    private void btn_iniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_iniciarSesionActionPerformed
+        // Obtener el texto de los campos de correo y contraseña
+        String email = txt_email.getText();
+        String password = new String(pwd_contrasenia.getPassword());
+
+        // Validar las credenciales (esto es solo un ejemplo; usa un enfoque más seguro en producción)
+        if (email.equals(correo) && password.equals(contrasenia)) {
+            // Credenciales válidas, abrir nueva ventana
+            InicioApp nuevaVentana = new InicioApp(this, true);
+            nuevaVentana.setVisible(true);
+
+            // Cerrar la ventana actual
+            this.dispose();
+        } else {
+            // Credenciales inválidas, mostrar mensaje de error
+            JOptionPane.showMessageDialog(this, "Correo o contraseña incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_btn_iniciarSesionActionPerformed
+
+    private void pwd_contraseniaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwd_contraseniaMouseClicked
+        pwd_contrasenia.setText("");
+        txt_email.setForeground(Color.BLACK);
+    }//GEN-LAST:event_pwd_contraseniaMouseClicked
 
     /**
      * @param args the command line arguments
@@ -223,12 +276,12 @@ public class InicioSesion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private vista.RoundTextField email;
+    private vista.RoundButton btn_iniciarSesion;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private vista.PanelRound panelInicio;
-    private vista.PasswordField passwordField2;
-    private vista.RoundButton roundButton1;
+    private vista.PasswordField pwd_contrasenia;
+    private vista.RoundTextField txt_email;
     // End of variables declaration//GEN-END:variables
 }
