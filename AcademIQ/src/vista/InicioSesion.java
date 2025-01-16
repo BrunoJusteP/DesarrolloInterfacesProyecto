@@ -34,9 +34,19 @@ public class InicioSesion extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         panelInicio = new vista.PanelRound();
         jLabel1 = new javax.swing.JLabel();
+<<<<<<< HEAD
+=======
+        email = new vista.RoundTextField();
+        roundButton1 = new vista.RoundButton();
+        pwd_contrasenia = new vista.PasswordField();
+>>>>>>> 5491f3aa1c694151724df8f4012e001e2a1a1019
         txt_email = new vista.RoundTextField();
         btn_inicioSesion = new vista.RoundButton();
         pwd_contrasenia = new vista.PasswordField();
+<<<<<<< HEAD
+=======
+        btn_iniciarSesion = new vista.RoundButton();
+>>>>>>> 5491f3aa1c694151724df8f4012e001e2a1a1019
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -78,21 +88,63 @@ public class InicioSesion extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD
         btn_inicioSesion.setForeground(new java.awt.Color(0, 98, 173));
         btn_inicioSesion.setText("Iniciar Sesion");
         btn_inicioSesion.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btn_inicioSesion.addActionListener(new java.awt.event.ActionListener() {
+=======
+        roundButton1.setForeground(new java.awt.Color(0, 98, 173));
+        roundButton1.setText("Iniciar Sesion");
+        roundButton1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        pwd_contrasenia.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        pwd_contrasenia.setText("contraseña");
+        pwd_contrasenia.setRound(15);
+        pwd_contrasenia.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pwd_contraseniaMouseClicked(evt);
+            }
+        });
+        pwd_contrasenia.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> 5491f3aa1c694151724df8f4012e001e2a1a1019
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_inicioSesionActionPerformed(evt);
             }
         });
 
+<<<<<<< HEAD
+=======
+        btn_iniciarSesion.setForeground(new java.awt.Color(0, 98, 173));
+        btn_iniciarSesion.setText("Iniciar Sesion");
+        btn_iniciarSesion.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btn_iniciarSesion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_iniciarSesionMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_iniciarSesionMouseExited(evt);
+            }
+        });
+        btn_iniciarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_iniciarSesionActionPerformed(evt);
+            }
+        });
+
+>>>>>>> 5491f3aa1c694151724df8f4012e001e2a1a1019
         pwd_contrasenia.setText("passwordField1");
 
         javax.swing.GroupLayout panelInicioLayout = new javax.swing.GroupLayout(panelInicio);
         panelInicio.setLayout(panelInicioLayout);
         panelInicioLayout.setHorizontalGroup(
             panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
+=======
+            .addGroup(panelInicioLayout.createSequentialGroup()
+                .addGap(131, 131, 131)
+                .addComponent(roundButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+>>>>>>> 5491f3aa1c694151724df8f4012e001e2a1a1019
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInicioLayout.createSequentialGroup()
                 .addContainerGap(42, Short.MAX_VALUE)
                 .addGroup(panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -100,10 +152,24 @@ public class InicioSesion extends javax.swing.JFrame {
                     .addComponent(txt_email, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(33, 33, 33))
+<<<<<<< HEAD
             .addGroup(panelInicioLayout.createSequentialGroup()
                 .addGap(131, 131, 131)
                 .addComponent(btn_inicioSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+=======
+                .addContainerGap(42, Short.MAX_VALUE)
+                .addGroup(panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInicioLayout.createSequentialGroup()
+                        .addGroup(panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txt_email, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(pwd_contrasenia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(33, 33, 33))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInicioLayout.createSequentialGroup()
+                        .addComponent(btn_iniciarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(157, 157, 157))))
+>>>>>>> 5491f3aa1c694151724df8f4012e001e2a1a1019
         );
         panelInicioLayout.setVerticalGroup(
             panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -111,12 +177,27 @@ public class InicioSesion extends javax.swing.JFrame {
                 .addGap(53, 53, 53)
                 .addComponent(jLabel1)
                 .addGap(51, 51, 51)
+<<<<<<< HEAD
+=======
+                .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(52, 52, 52)
+                .addComponent(pwd_contrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57)
+                .addComponent(roundButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(46, Short.MAX_VALUE))
+>>>>>>> 5491f3aa1c694151724df8f4012e001e2a1a1019
                 .addComponent(txt_email, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
                 .addComponent(pwd_contrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+<<<<<<< HEAD
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
                 .addComponent(btn_inicioSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(60, 60, 60))
+=======
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                .addComponent(btn_iniciarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48))
+>>>>>>> 5491f3aa1c694151724df8f4012e001e2a1a1019
         );
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/inicioSesion.png"))); // NOI18N
@@ -182,25 +263,49 @@ public class InicioSesion extends javax.swing.JFrame {
         txt_email.setForeground(Color.BLACK);
     }//GEN-LAST:event_txt_emailMouseClicked
 
+<<<<<<< HEAD
     private void btn_inicioSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inicioSesionActionPerformed
+=======
+    private void pwd_contraseniaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwd_contraseniaActionPerformed
+        
+    }//GEN-LAST:event_pwd_contraseniaActionPerformed
+
+    private void btn_iniciarSesionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_iniciarSesionMouseEntered
+        
+    }//GEN-LAST:event_btn_iniciarSesionMouseEntered
+
+    private void btn_iniciarSesionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_iniciarSesionMouseExited
+        
+    }//GEN-LAST:event_btn_iniciarSesionMouseExited
+
+    private void btn_iniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_iniciarSesionActionPerformed
+>>>>>>> 5491f3aa1c694151724df8f4012e001e2a1a1019
         // Obtener el texto de los campos de correo y contraseña
         String email = txt_email.getText();
         String password = new String(pwd_contrasenia.getPassword());
 
         // Validar las credenciales (esto es solo un ejemplo; usa un enfoque más seguro en producción)
         if (email.equals(correo) && password.equals(contrasenia)) {
-            // Credenciales válidas, abrir nueva ventana
-            InicioApp nuevaVentana = new InicioApp(this, true);
-            nuevaVentana.setVisible(true);
-
             // Cerrar la ventana actual
             this.dispose();
+            
+            // Credenciales válidas, abrir nueva ventana
+            InicioApp nuevaVentana = new InicioApp(this, true);
+            nuevaVentana.setVisible(true);    
         } else {
             // Credenciales inválidas, mostrar mensaje de error
             JOptionPane.showMessageDialog(this, "Correo o contraseña incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btn_inicioSesionActionPerformed
 
+<<<<<<< HEAD
+=======
+    private void pwd_contraseniaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwd_contraseniaMouseClicked
+        pwd_contrasenia.setText("");
+        txt_email.setForeground(Color.BLACK);
+    }//GEN-LAST:event_pwd_contraseniaMouseClicked
+
+>>>>>>> 5491f3aa1c694151724df8f4012e001e2a1a1019
     /**
      * @param args the command line arguments
      */
@@ -244,6 +349,10 @@ public class InicioSesion extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private vista.PanelRound panelInicio;
     private vista.PasswordField pwd_contrasenia;
+<<<<<<< HEAD
+=======
+    private vista.RoundButton roundButton1;
+>>>>>>> 5491f3aa1c694151724df8f4012e001e2a1a1019
     private vista.RoundTextField txt_email;
     // End of variables declaration//GEN-END:variables
 }
