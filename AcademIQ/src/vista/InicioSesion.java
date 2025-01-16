@@ -223,12 +223,12 @@ public class InicioSesion extends javax.swing.JFrame {
 
         // Validar las credenciales (esto es solo un ejemplo; usa un enfoque más seguro en producción)
         if (email.equals(correo) && password.equals(contrasenia)) {
-            // Credenciales válidas, abrir nueva ventana
-            InicioApp nuevaVentana = new InicioApp(this, true);
-            nuevaVentana.setVisible(true);
-
             // Cerrar la ventana actual
             this.dispose();
+            
+            // Credenciales válidas, abrir nueva ventana
+            InicioApp nuevaVentana = new InicioApp(this, true);
+            nuevaVentana.setVisible(true);    
         } else {
             // Credenciales inválidas, mostrar mensaje de error
             JOptionPane.showMessageDialog(this, "Correo o contraseña incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
