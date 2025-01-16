@@ -20,7 +20,7 @@ public class AccesoADatos extends javax.swing.JDialog {
     /**
      * Creates new form AccesoADatos
      */
-    public AccesoADatos(java.awt.Frame parent, boolean modal) {
+    public AccesoADatos(java.awt.Dialog parent, boolean modal) {
         super(parent, modal);
         initComponents();
         btn_tema1.addActionListener(e -> {
@@ -30,10 +30,10 @@ public class AccesoADatos extends javax.swing.JDialog {
             chooseAndDownloadFile("https://drive.google.com/uc?export=download&id=11rkmYfUgD3aWJXwhezJ3sRKcIIOjtXDi");
         });
         btn_tema3.addActionListener(e -> {
-            chooseAndDownloadFile("https://drive.google.com/uc?export=download&id=1Vmr0SEsMenTJ1uKDHXgqTfCYDlIQOAkU");
+            chooseAndDownloadFile("https://drive.google.com/uc?export=download&id=1YSPFfdAHzbGOl3IVoW8eqAjvU9xfVe5E");
         });
         btn_tema4.addActionListener(e -> {
-            chooseAndDownloadFile("https://drive.google.com/uc?export=download&id=1Vmr0SEsMenTJ1uKDHXgqTfCYDlIQOAkU");
+            chooseAndDownloadFile("https://drive.google.com/uc?export=download&id=1XaRAV-1K1T0Xe1y_WQRMI2p_4YdE1-in");
         });
     }
 
