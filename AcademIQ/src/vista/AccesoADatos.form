@@ -229,7 +229,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="vista.RoundButton" name="roundButton7">
+        <Component class="vista.RoundButton" name="btn_tema1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ad" green="62" red="0" type="rgb"/>
@@ -249,7 +249,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="vista.RoundButton" name="roundButton8">
+        <Component class="vista.RoundButton" name="btn_tema2">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="f6" green="b6" red="0" type="rgb"/>
@@ -263,13 +263,16 @@
             </Property>
             <Property name="round" type="int" value="15"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_tema2ActionPerformed"/>
+          </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="30" y="220" width="870" height="80"/>
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="vista.RoundButton" name="roundButton9">
+        <Component class="vista.RoundButton" name="btn_tema3">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="f6" green="b6" red="0" type="rgb"/>
@@ -289,7 +292,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="vista.RoundButton" name="roundButton10">
+        <Component class="vista.RoundButton" name="btn_tema4">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="f6" green="b6" red="0" type="rgb"/>

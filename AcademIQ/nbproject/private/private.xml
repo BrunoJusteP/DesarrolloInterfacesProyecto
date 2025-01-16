@@ -3,21 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/Alumno/Desktop/DesarrolloInterfacesProyecto/AcademIQ/src/vista/InicioSesion.java</file>
-            <file>file:/C:/Users/Alumno/Desktop/DesarrolloInterfacesProyecto/AcademIQ/src/vista/Calendario.java</file>
-            <file>file:/C:/Users/Alumno/Desktop/DesarrolloInterfacesProyecto/AcademIQ/src/vista/AccesoADatos.java</file>
-            <file>file:/C:/Users/Alumno/Desktop/DesarrolloInterfacesProyecto/AcademIQ/src/vista/InicioApp.java</file>
-            <file>file:/C:/Users/Alumno/Desktop/DesarrolloInterfacesProyecto/AcademIQ/src/vista/PasswordField.java</file>
-            <file>file:/C:/Users/Alumno/Desktop/DesarrolloInterfacesProyecto/AcademIQ/src/vista/RoundTextField.java</file>
-=======
             <file>file:/C:/Users/Alumno/Documents/NetBeansProjects/AcademIQ/src/vista/PanelRound.java</file>
             <file>file:/C:/Users/Alumno/Documents/NetBeansProjects/AcademIQ/src/vista/InicioSesion.java</file>
         </group>
         <group name="Ya Hechos">
+            <file>file:/C:/Users/Alumno/Desktop/ProyectoDesarrolloInterfaces/DesarrolloInterfacesProyecto/AcademIQ/src/vista/AccesoADatos.java</file>
             <file>file:/C:/Users/Alumno/Desktop/ProyectoDesarrolloInterfaces/DesarrolloInterfacesProyecto/AcademIQ/src/vista/InicioApp.java</file>
-            <file>file:/C:/Users/Alumno/Desktop/ProyectoDesarrolloInterfaces/DesarrolloInterfacesProyecto/AcademIQ/src/vista/InicioSesion.java</file>
->>>>>>> abafeb239bbc9dc49ccac61858c218d6a5ffe4ad
         </group>
     </open-files>
 </project-private>

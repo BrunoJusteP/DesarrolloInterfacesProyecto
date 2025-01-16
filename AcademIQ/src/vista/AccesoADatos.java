@@ -23,7 +23,16 @@ public class AccesoADatos extends javax.swing.JDialog {
     public AccesoADatos(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        roundButton7.addActionListener(e -> {
+        btn_tema1.addActionListener(e -> {
+            chooseAndDownloadFile("https://drive.google.com/uc?export=download&id=1Vmr0SEsMenTJ1uKDHXgqTfCYDlIQOAkU");
+        });
+        btn_tema2.addActionListener(e -> {
+            chooseAndDownloadFile("https://drive.google.com/uc?export=download&id=11rkmYfUgD3aWJXwhezJ3sRKcIIOjtXDi");
+        });
+        btn_tema3.addActionListener(e -> {
+            chooseAndDownloadFile("https://drive.google.com/uc?export=download&id=1Vmr0SEsMenTJ1uKDHXgqTfCYDlIQOAkU");
+        });
+        btn_tema4.addActionListener(e -> {
             chooseAndDownloadFile("https://drive.google.com/uc?export=download&id=1Vmr0SEsMenTJ1uKDHXgqTfCYDlIQOAkU");
         });
     }
@@ -99,10 +108,10 @@ public class AccesoADatos extends javax.swing.JDialog {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         roundButton5 = new vista.RoundButton();
-        roundButton7 = new vista.RoundButton();
-        roundButton8 = new vista.RoundButton();
-        roundButton9 = new vista.RoundButton();
-        roundButton10 = new vista.RoundButton();
+        btn_tema1 = new vista.RoundButton();
+        btn_tema2 = new vista.RoundButton();
+        btn_tema3 = new vista.RoundButton();
+        btn_tema4 = new vista.RoundButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1280, 832));
@@ -204,37 +213,42 @@ public class AccesoADatos extends javax.swing.JDialog {
         jPanel2.add(roundButton5);
         roundButton5.setBounds(800, 30, 90, 90);
 
-        roundButton7.setBackground(new java.awt.Color(0, 98, 173));
-        roundButton7.setForeground(new java.awt.Color(255, 255, 255));
-        roundButton7.setText("Tema 1: Fundamentos de la programacion");
-        roundButton7.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        roundButton7.setRound(15);
-        jPanel2.add(roundButton7);
-        roundButton7.setBounds(30, 140, 870, 80);
+        btn_tema1.setBackground(new java.awt.Color(0, 98, 173));
+        btn_tema1.setForeground(new java.awt.Color(255, 255, 255));
+        btn_tema1.setText("Tema 1: Fundamentos de la programacion");
+        btn_tema1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btn_tema1.setRound(15);
+        jPanel2.add(btn_tema1);
+        btn_tema1.setBounds(30, 140, 870, 80);
 
-        roundButton8.setBackground(new java.awt.Color(0, 182, 246));
-        roundButton8.setForeground(new java.awt.Color(255, 255, 255));
-        roundButton8.setText("Tema 2: Manejo de Ficheros");
-        roundButton8.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        roundButton8.setRound(15);
-        jPanel2.add(roundButton8);
-        roundButton8.setBounds(30, 220, 870, 80);
+        btn_tema2.setBackground(new java.awt.Color(0, 182, 246));
+        btn_tema2.setForeground(new java.awt.Color(255, 255, 255));
+        btn_tema2.setText("Tema 2: Manejo de Ficheros");
+        btn_tema2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btn_tema2.setRound(15);
+        btn_tema2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_tema2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_tema2);
+        btn_tema2.setBounds(30, 220, 870, 80);
 
-        roundButton9.setBackground(new java.awt.Color(0, 182, 246));
-        roundButton9.setForeground(new java.awt.Color(255, 255, 255));
-        roundButton9.setText("Tema 3: Conectores a Sistemas Gestores de Bases de datos");
-        roundButton9.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        roundButton9.setRound(15);
-        jPanel2.add(roundButton9);
-        roundButton9.setBounds(30, 300, 870, 80);
+        btn_tema3.setBackground(new java.awt.Color(0, 182, 246));
+        btn_tema3.setForeground(new java.awt.Color(255, 255, 255));
+        btn_tema3.setText("Tema 3: Conectores a Sistemas Gestores de Bases de datos");
+        btn_tema3.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btn_tema3.setRound(15);
+        jPanel2.add(btn_tema3);
+        btn_tema3.setBounds(30, 300, 870, 80);
 
-        roundButton10.setBackground(new java.awt.Color(0, 182, 246));
-        roundButton10.setForeground(new java.awt.Color(255, 255, 255));
-        roundButton10.setText("Tema 4: Generacion de servicios de acceso a datos");
-        roundButton10.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        roundButton10.setRound(15);
-        jPanel2.add(roundButton10);
-        roundButton10.setBounds(30, 380, 870, 80);
+        btn_tema4.setBackground(new java.awt.Color(0, 182, 246));
+        btn_tema4.setForeground(new java.awt.Color(255, 255, 255));
+        btn_tema4.setText("Tema 4: Generacion de servicios de acceso a datos");
+        btn_tema4.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btn_tema4.setRound(15);
+        jPanel2.add(btn_tema4);
+        btn_tema4.setBounds(30, 380, 870, 80);
 
         getContentPane().add(jPanel2);
         jPanel2.setBounds(350, 0, 930, 830);
@@ -242,7 +256,15 @@ public class AccesoADatos extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btn_tema2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_tema2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_tema2ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private vista.RoundButton btn_tema1;
+    private vista.RoundButton btn_tema2;
+    private vista.RoundButton btn_tema3;
+    private vista.RoundButton btn_tema4;
     private javax.swing.JLabel img_logo1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -250,13 +272,9 @@ public class AccesoADatos extends javax.swing.JDialog {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private vista.RoundButton roundButton1;
-    private vista.RoundButton roundButton10;
     private vista.RoundButton roundButton2;
     private vista.RoundButton roundButton3;
     private vista.RoundButton roundButton4;
     private vista.RoundButton roundButton5;
-    private vista.RoundButton roundButton7;
-    private vista.RoundButton roundButton8;
-    private vista.RoundButton roundButton9;
     // End of variables declaration//GEN-END:variables
 }
