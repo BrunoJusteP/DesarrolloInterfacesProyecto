@@ -100,6 +100,11 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
+<<<<<<< HEAD
+                      <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
+                      <Component id="roundButton1" min="-2" pref="248" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+=======
                       <EmptySpace pref="42" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
@@ -115,6 +120,18 @@
                               <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+>>>>>>> abafeb239bbc9dc49ccac61858c218d6a5ffe4ad
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace pref="42" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="pwd_contrasenia" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="email" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -124,12 +141,21 @@
                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+<<<<<<< HEAD
+                      <Component id="email" min="-2" pref="60" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                      <Component id="pwd_contrasenia" min="-2" pref="60" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                      <Component id="roundButton1" min="-2" pref="64" max="-2" attributes="0"/>
+                      <EmptySpace pref="46" max="32767" attributes="0"/>
+=======
                       <Component id="txt_email" min="-2" pref="60" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                       <Component id="pwd_contrasenia" min="-2" pref="60" max="-2" attributes="0"/>
                       <EmptySpace pref="60" max="32767" attributes="0"/>
                       <Component id="btn_iniciarSesion" min="-2" pref="64" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+>>>>>>> abafeb239bbc9dc49ccac61858c218d6a5ffe4ad
                   </Group>
               </Group>
             </DimensionLayout>
@@ -161,6 +187,9 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_emailActionPerformed"/>
               </Events>
             </Component>
+<<<<<<< HEAD
+            <Component class="vista.RoundButton" name="roundButton1">
+=======
             <Component class="vista.PasswordField" name="pwd_contrasenia">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -177,6 +206,7 @@
               </Events>
             </Component>
             <Component class="vista.RoundButton" name="btn_iniciarSesion">
+>>>>>>> abafeb239bbc9dc49ccac61858c218d6a5ffe4ad
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ad" green="62" red="0" type="rgb"/>
@@ -191,6 +221,11 @@
                 <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_iniciarSesionMouseExited"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_iniciarSesionActionPerformed"/>
               </Events>
+            </Component>
+            <Component class="vista.PasswordField" name="pwd_contrasenia">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="passwordField1"/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>

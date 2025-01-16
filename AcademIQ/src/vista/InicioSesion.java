@@ -35,9 +35,15 @@ public class InicioSesion extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         panelInicio = new vista.PanelRound();
         jLabel1 = new javax.swing.JLabel();
+<<<<<<< HEAD
+        email = new vista.RoundTextField();
+        roundButton1 = new vista.RoundButton();
+        pwd_contrasenia = new vista.PasswordField();
+=======
         txt_email = new vista.RoundTextField();
         pwd_contrasenia = new vista.PasswordField();
         btn_iniciarSesion = new vista.RoundButton();
+>>>>>>> abafeb239bbc9dc49ccac61858c218d6a5ffe4ad
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -81,6 +87,11 @@ public class InicioSesion extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD
+        roundButton1.setForeground(new java.awt.Color(0, 98, 173));
+        roundButton1.setText("Iniciar Sesion");
+        roundButton1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+=======
         pwd_contrasenia.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         pwd_contrasenia.setText("contraseña");
         pwd_contrasenia.setRound(15);
@@ -111,12 +122,28 @@ public class InicioSesion extends javax.swing.JFrame {
                 btn_iniciarSesionActionPerformed(evt);
             }
         });
+>>>>>>> abafeb239bbc9dc49ccac61858c218d6a5ffe4ad
+
+        pwd_contrasenia.setText("passwordField1");
 
         javax.swing.GroupLayout panelInicioLayout = new javax.swing.GroupLayout(panelInicio);
         panelInicio.setLayout(panelInicioLayout);
         panelInicioLayout.setHorizontalGroup(
             panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelInicioLayout.createSequentialGroup()
+<<<<<<< HEAD
+                .addGap(131, 131, 131)
+                .addComponent(roundButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInicioLayout.createSequentialGroup()
+                .addContainerGap(42, Short.MAX_VALUE)
+                .addGroup(panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(pwd_contrasenia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(email, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(33, 33, 33))
+=======
                 .addContainerGap(42, Short.MAX_VALUE)
                 .addGroup(panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInicioLayout.createSequentialGroup()
@@ -128,6 +155,7 @@ public class InicioSesion extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInicioLayout.createSequentialGroup()
                         .addComponent(btn_iniciarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(157, 157, 157))))
+>>>>>>> abafeb239bbc9dc49ccac61858c218d6a5ffe4ad
         );
         panelInicioLayout.setVerticalGroup(
             panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -135,12 +163,21 @@ public class InicioSesion extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addComponent(jLabel1)
                 .addGap(51, 51, 51)
+<<<<<<< HEAD
+                .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(52, 52, 52)
+                .addComponent(pwd_contrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57)
+                .addComponent(roundButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(46, Short.MAX_VALUE))
+=======
                 .addComponent(txt_email, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47)
                 .addComponent(pwd_contrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                 .addComponent(btn_iniciarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(48, 48, 48))
+>>>>>>> abafeb239bbc9dc49ccac61858c218d6a5ffe4ad
         );
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/inicioSesion.png"))); // NOI18N
@@ -204,6 +241,8 @@ public class InicioSesion extends javax.swing.JFrame {
         txt_email.setForeground(Color.BLACK);
     }//GEN-LAST:event_txt_emailMouseClicked
 
+<<<<<<< HEAD
+=======
     private void pwd_contraseniaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwd_contraseniaActionPerformed
         
     }//GEN-LAST:event_pwd_contraseniaActionPerformed
@@ -240,6 +279,7 @@ public class InicioSesion extends javax.swing.JFrame {
         txt_email.setForeground(Color.BLACK);
     }//GEN-LAST:event_pwd_contraseniaMouseClicked
 
+>>>>>>> abafeb239bbc9dc49ccac61858c218d6a5ffe4ad
     /**
      * @param args the command line arguments
      */
@@ -282,6 +322,10 @@ public class InicioSesion extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private vista.PanelRound panelInicio;
     private vista.PasswordField pwd_contrasenia;
+<<<<<<< HEAD
+    private vista.RoundButton roundButton1;
+=======
     private vista.RoundTextField txt_email;
+>>>>>>> abafeb239bbc9dc49ccac61858c218d6a5ffe4ad
     // End of variables declaration//GEN-END:variables
 }
