@@ -16,7 +16,7 @@ public class Calendario extends javax.swing.JDialog {
     /**
      * Creates new form Calendario
      */
-    public Calendario(java.awt.Frame parent, boolean modal) {
+    public Calendario(java.awt.Dialog parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
@@ -40,6 +40,10 @@ public class Calendario extends javax.swing.JDialog {
         btn_calendario = new vista.RoundButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setLocationByPlatform(true);
+        setMaximumSize(new java.awt.Dimension(1280, 832));
+        setMinimumSize(new java.awt.Dimension(1280, 832));
+        setResizable(false);
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(0, 98, 173));

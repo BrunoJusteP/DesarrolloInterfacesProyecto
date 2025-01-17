@@ -11,16 +11,12 @@ import javax.swing.ImageIcon;
  *
  * @author Alumno
  */
-public class InicioApp extends javax.swing.JDialog {
-    
-    AccesoADatos accesoADatos;
-    SistemasDeGestion sistemas;
-    Calendario calendario;
+public class Notas extends javax.swing.JDialog {
 
     /**
-     * Creates new form InicioApp
+     * Creates new form Notas
      */
-    public InicioApp(java.awt.Frame parent, boolean modal) {
+    public Notas(java.awt.Dialog parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
@@ -42,18 +38,10 @@ public class InicioApp extends javax.swing.JDialog {
         btn_notas = new vista.RoundButton();
         btn_ajustes = new vista.RoundButton();
         btn_calendario = new vista.RoundButton();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        roundButton5 = new vista.RoundButton();
-        btn_programacion = new javax.swing.JButton();
-        btn_accesoADatos = new javax.swing.JButton();
-        btn_desarrollo = new javax.swing.JButton();
-        btn_sistemasGestion = new javax.swing.JButton();
-        btn_psp = new javax.swing.JButton();
-        btn_empresa = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1920, 1080));
+        setTitle("Notas");
+        setMaximumSize(new java.awt.Dimension(1280, 832));
         setMinimumSize(new java.awt.Dimension(1280, 832));
         getContentPane().setLayout(null);
 
@@ -66,16 +54,29 @@ public class InicioApp extends javax.swing.JDialog {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("AcademIQ");
 
-        btn_inicio.setForeground(new java.awt.Color(0, 98, 173));
-        btn_inicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/HomeIcono.png"))); // NOI18N
+        btn_inicio.setBackground(new java.awt.Color(0, 98, 173));
+        btn_inicio.setForeground(new java.awt.Color(255, 255, 255));
+        btn_inicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/home_blanco.png"))); // NOI18N
         btn_inicio.setText("  INICIO");
         btn_inicio.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         btn_inicio.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btn_inicio.setRound(15);
+        btn_inicio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_inicioMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_inicioMouseExited(evt);
+            }
+        });
+        btn_inicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_inicioActionPerformed(evt);
+            }
+        });
 
-        btn_notas.setBackground(new java.awt.Color(0, 98, 173));
-        btn_notas.setForeground(new java.awt.Color(255, 255, 255));
-        btn_notas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/NotasIcono.png"))); // NOI18N
+        btn_notas.setForeground(new java.awt.Color(0, 98, 173));
+        btn_notas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/notas_color.png"))); // NOI18N
         btn_notas.setText("  NOTAS");
         btn_notas.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         btn_notas.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -86,11 +87,6 @@ public class InicioApp extends javax.swing.JDialog {
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btn_notasMouseExited(evt);
-            }
-        });
-        btn_notas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_notasActionPerformed(evt);
             }
         });
 
@@ -172,108 +168,15 @@ public class InicioApp extends javax.swing.JDialog {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 350, 832);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setLayout(null);
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel2.setText("¡Hola de nuevo, nombre!");
-        jPanel2.add(jLabel2);
-        jLabel2.setBounds(40, 50, 622, 72);
-
-        roundButton5.setBackground(new java.awt.Color(153, 153, 153));
-        roundButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Usuario.png"))); // NOI18N
-        roundButton5.setRound(110);
-        jPanel2.add(roundButton5);
-        roundButton5.setBounds(800, 30, 90, 90);
-
-        btn_programacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ProgramacionMultimedia.png"))); // NOI18N
-        btn_programacion.setBorder(null);
-        btn_programacion.setContentAreaFilled(false);
-        jPanel2.add(btn_programacion);
-        btn_programacion.setBounds(620, 140, 270, 210);
-
-        btn_accesoADatos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/accesoADatos.png"))); // NOI18N
-        btn_accesoADatos.setBorder(null);
-        btn_accesoADatos.setContentAreaFilled(false);
-        btn_accesoADatos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_accesoADatosActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btn_accesoADatos);
-        btn_accesoADatos.setBounds(20, 140, 270, 210);
-
-        btn_desarrollo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/DesarrolloInterfaces.png"))); // NOI18N
-        btn_desarrollo.setBorder(null);
-        btn_desarrollo.setBorderPainted(false);
-        btn_desarrollo.setContentAreaFilled(false);
-        jPanel2.add(btn_desarrollo);
-        btn_desarrollo.setBounds(320, 140, 270, 210);
-
-        btn_sistemasGestion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/SistemaGestion.png"))); // NOI18N
-        btn_sistemasGestion.setBorder(null);
-        btn_sistemasGestion.setContentAreaFilled(false);
-        btn_sistemasGestion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_sistemasGestionActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btn_sistemasGestion);
-        btn_sistemasGestion.setBounds(20, 370, 270, 210);
-
-        btn_psp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/PSP.png"))); // NOI18N
-        btn_psp.setBorder(null);
-        btn_psp.setContentAreaFilled(false);
-        jPanel2.add(btn_psp);
-        btn_psp.setBounds(320, 370, 270, 210);
-
-        btn_empresa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Empresa.png"))); // NOI18N
-        btn_empresa.setBorder(null);
-        btn_empresa.setContentAreaFilled(false);
-        jPanel2.add(btn_empresa);
-        btn_empresa.setBounds(620, 370, 270, 210);
-
-        getContentPane().add(jPanel2);
-        jPanel2.setBounds(350, 0, 930, 830);
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_accesoADatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_accesoADatosActionPerformed
-        this.dispose();
-        accesoADatos = new AccesoADatos(this, true);
-        accesoADatos.setVisible(true);
-    }//GEN-LAST:event_btn_accesoADatosActionPerformed
-
-    private void btn_sistemasGestionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sistemasGestionActionPerformed
-        this.dispose();
-        sistemas = new SistemasDeGestion(this, true);
-        sistemas.setVisible(true);
-    }//GEN-LAST:event_btn_sistemasGestionActionPerformed
-
-    private void btn_calendarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_calendarioMouseEntered
-        btn_calendario.setBackground(Color.WHITE);
-        btn_calendario.setForeground(new Color(0, 98, 173));
-        btn_calendario.setIcon(new ImageIcon(getClass().getResource("/imagenes/calendario_color.png")));
-        
-    }//GEN-LAST:event_btn_calendarioMouseEntered
-
-    private void btn_calendarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_calendarioMouseExited
-        btn_calendario.setBackground(new Color(0, 98, 173));
-        btn_calendario.setForeground(Color.WHITE); 
-        btn_calendario.setIcon(new ImageIcon(getClass().getResource("/imagenes/CalendarioIcono.png")));
-    }//GEN-LAST:event_btn_calendarioMouseExited
-
     private void btn_notasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_notasMouseEntered
-        btn_notas.setBackground(Color.WHITE);
-        btn_notas.setForeground(new Color(0, 98, 173));
-        btn_notas.setIcon(new ImageIcon(getClass().getResource("/imagenes/notas_color.png")));
+
     }//GEN-LAST:event_btn_notasMouseEntered
 
     private void btn_notasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_notasMouseExited
-        btn_notas.setBackground(new Color(0, 98, 173));
-        btn_notas.setForeground(Color.WHITE); 
-        btn_notas.setIcon(new ImageIcon(getClass().getResource("/imagenes/NotasIcono.png")));
+
     }//GEN-LAST:event_btn_notasMouseExited
 
     private void btn_ajustesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ajustesMouseEntered
@@ -286,39 +189,55 @@ public class InicioApp extends javax.swing.JDialog {
         btn_ajustes.setBackground(new Color(0, 98, 173));
         btn_ajustes.setForeground(Color.WHITE);
         btn_ajustes.setIcon(new ImageIcon(getClass().getResource("/imagenes/AjustesIcono.png")));
-        
+
     }//GEN-LAST:event_btn_ajustesMouseExited
+
+    private void btn_calendarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_calendarioMouseEntered
+        btn_calendario.setBackground(Color.WHITE);
+        btn_calendario.setForeground(new Color(0, 98, 173));
+        btn_calendario.setIcon(new ImageIcon(getClass().getResource("/imagenes/calendario_color.png")));
+
+    }//GEN-LAST:event_btn_calendarioMouseEntered
+
+    private void btn_calendarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_calendarioMouseExited
+        btn_calendario.setBackground(new Color(0, 98, 173));
+        btn_calendario.setForeground(Color.WHITE);
+        btn_calendario.setIcon(new ImageIcon(getClass().getResource("/imagenes/CalendarioIcono.png")));
+    }//GEN-LAST:event_btn_calendarioMouseExited
 
     private void btn_calendarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_calendarioActionPerformed
         this.dispose();
-        calendario = new Calendario(this, true);
+        Calendario calendario = new Calendario(this, true);
         calendario.setVisible(true);
-        
     }//GEN-LAST:event_btn_calendarioActionPerformed
 
-    private void btn_notasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_notasActionPerformed
+    private void btn_inicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inicioActionPerformed
         this.dispose();
-        Notas ventanaNotas = new Notas(this, true);
-        ventanaNotas.setVisible(true);
-    }//GEN-LAST:event_btn_notasActionPerformed
+        InicioApp inicio = new InicioApp(null, true);
+        inicio.setVisible(true);
+    }//GEN-LAST:event_btn_inicioActionPerformed
+
+    private void btn_inicioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_inicioMouseEntered
+        btn_inicio.setBackground(Color.WHITE);
+        btn_inicio.setForeground(new Color(0, 98, 173));
+        btn_inicio.setIcon(new ImageIcon(getClass().getResource("/imagenes/HomeIcono.png")));
+    }//GEN-LAST:event_btn_inicioMouseEntered
+
+    private void btn_inicioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_inicioMouseExited
+        btn_inicio.setBackground(new Color(0, 98, 173));
+        btn_inicio.setForeground(Color.WHITE);
+        btn_inicio.setIcon(new ImageIcon(getClass().getResource("/imagenes/home_blanco.png")));
+    }//GEN-LAST:event_btn_inicioMouseExited
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_accesoADatos;
     private vista.RoundButton btn_ajustes;
     private vista.RoundButton btn_calendario;
-    private javax.swing.JButton btn_desarrollo;
-    private javax.swing.JButton btn_empresa;
     private vista.RoundButton btn_inicio;
     private vista.RoundButton btn_notas;
-    private javax.swing.JButton btn_programacion;
-    private javax.swing.JButton btn_psp;
-    private javax.swing.JButton btn_sistemasGestion;
     private javax.swing.JLabel img_logo1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
-    private vista.RoundButton roundButton5;
     // End of variables declaration//GEN-END:variables
 }
