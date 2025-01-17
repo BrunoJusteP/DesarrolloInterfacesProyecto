@@ -58,10 +58,10 @@
                           <Component id="jLabel1" pref="211" max="32767" attributes="0"/>
                       </Group>
                       <Component id="jSeparator1" max="32767" attributes="0"/>
-                      <Component id="roundButton1" max="32767" attributes="0"/>
-                      <Component id="roundButton2" alignment="0" max="32767" attributes="0"/>
-                      <Component id="roundButton3" alignment="0" max="32767" attributes="0"/>
-                      <Component id="roundButton4" alignment="1" max="32767" attributes="0"/>
+                      <Component id="btn_inicio" max="32767" attributes="0"/>
+                      <Component id="btn_notas" alignment="0" max="32767" attributes="0"/>
+                      <Component id="btn_ajustes" alignment="0" max="32767" attributes="0"/>
+                      <Component id="btn_calendario" alignment="1" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace pref="28" max="32767" attributes="0"/>
               </Group>
@@ -78,13 +78,13 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jSeparator1" min="-2" pref="13" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="roundButton1" min="-2" pref="51" max="-2" attributes="0"/>
+                  <Component id="btn_inicio" min="-2" pref="51" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="roundButton4" min="-2" pref="51" max="-2" attributes="0"/>
+                  <Component id="btn_calendario" min="-2" pref="51" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="roundButton2" min="-2" pref="51" max="-2" attributes="0"/>
+                  <Component id="btn_notas" min="-2" pref="51" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="roundButton3" min="-2" pref="51" max="-2" attributes="0"/>
+                  <Component id="btn_ajustes" min="-2" pref="51" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="481" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -111,7 +111,7 @@
             <Property name="text" type="java.lang.String" value="AcademIQ"/>
           </Properties>
         </Component>
-        <Component class="vista.RoundButton" name="roundButton1">
+        <Component class="vista.RoundButton" name="btn_inicio">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ad" green="62" red="0" type="rgb"/>
@@ -127,7 +127,7 @@
             <Property name="round" type="int" value="15"/>
           </Properties>
         </Component>
-        <Component class="vista.RoundButton" name="roundButton2">
+        <Component class="vista.RoundButton" name="btn_notas">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ad" green="62" red="0" type="rgb"/>
@@ -145,8 +145,12 @@
             <Property name="horizontalAlignment" type="int" value="2"/>
             <Property name="round" type="int" value="15"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_notasMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_notasMouseExited"/>
+          </Events>
         </Component>
-        <Component class="vista.RoundButton" name="roundButton3">
+        <Component class="vista.RoundButton" name="btn_ajustes">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ad" green="62" red="0" type="rgb"/>
@@ -164,8 +168,12 @@
             <Property name="horizontalAlignment" type="int" value="2"/>
             <Property name="round" type="int" value="15"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_ajustesMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_ajustesMouseExited"/>
+          </Events>
         </Component>
-        <Component class="vista.RoundButton" name="roundButton4">
+        <Component class="vista.RoundButton" name="btn_calendario">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ad" green="62" red="0" type="rgb"/>
@@ -183,6 +191,10 @@
             <Property name="horizontalAlignment" type="int" value="2"/>
             <Property name="round" type="int" value="15"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_calendarioMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_calendarioMouseExited"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
