@@ -10,6 +10,8 @@ package vista;
  */
 public class InicioApp extends javax.swing.JDialog {
 
+    AccesoADatos accesoADatos;
+    
     /**
      * Creates new form InicioApp
      */
@@ -154,6 +156,11 @@ public class InicioApp extends javax.swing.JDialog {
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/accesoADatos.png"))); // NOI18N
         jButton2.setBorder(null);
         jButton2.setContentAreaFilled(false);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton2);
         jButton2.setBounds(20, 140, 270, 210);
 
@@ -187,6 +194,12 @@ public class InicioApp extends javax.swing.JDialog {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        this.dispose();
+        accesoADatos = new AccesoADatos(this, true);
+        accesoADatos.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel img_logo1;
