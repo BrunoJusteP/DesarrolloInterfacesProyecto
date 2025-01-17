@@ -10,6 +10,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import java.awt.Color;
 
 /**
  *
@@ -23,41 +24,49 @@ public class AccesoADatos extends javax.swing.JDialog {
     public AccesoADatos(java.awt.Dialog parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        
+        btn_tema2.setEnabled(false);
+        btn_tema3.setEnabled(false);
+        btn_tema4.setEnabled(false);
+        
         btn_tema1.addActionListener(e -> {
-            chooseAndDownloadFile("https://drive.google.com/uc?export=download&id=1Vmr0SEsMenTJ1uKDHXgqTfCYDlIQOAkU");
+            chooseAndDownloadFile("https://drive.google.com/uc?export=download&id=1Vmr0SEsMenTJ1uKDHXgqTfCYDlIQOAkU", btn_tema2, "Tema1.pdf");
         });
         btn_tema2.addActionListener(e -> {
-            chooseAndDownloadFile("https://drive.google.com/uc?export=download&id=11rkmYfUgD3aWJXwhezJ3sRKcIIOjtXDi");
+            chooseAndDownloadFile("https://drive.google.com/uc?export=download&id=11rkmYfUgD3aWJXwhezJ3sRKcIIOjtXDi", btn_tema3, "Tema2.pdf");
         });
         btn_tema3.addActionListener(e -> {
-            chooseAndDownloadFile("https://drive.google.com/uc?export=download&id=1YSPFfdAHzbGOl3IVoW8eqAjvU9xfVe5E");
+            chooseAndDownloadFile("https://drive.google.com/uc?export=download&id=1YSPFfdAHzbGOl3IVoW8eqAjvU9xfVe5E", btn_tema4, "Tema3.pdf");
         });
         btn_tema4.addActionListener(e -> {
-            chooseAndDownloadFile("https://drive.google.com/uc?export=download&id=1XaRAV-1K1T0Xe1y_WQRMI2p_4YdE1-in");
+            chooseAndDownloadFile("https://drive.google.com/uc?export=download&id=1XaRAV-1K1T0Xe1y_WQRMI2p_4YdE1-in", null, "Tema4.pdf");
         });
     }
 
-    private void chooseAndDownloadFile(String fileURL) {
-        // Abrir un JFileChooser para seleccionar el archivo de destino
+    private void chooseAndDownloadFile(String fileURL, javax.swing.JButton nextButton, String defaultFileName) {
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setDialogTitle("Seleccione dónde guardar el archivo");
         fileChooser.setApproveButtonText("Guardar");
-        
-        // Permitir solo seleccionar archivos para guardar
-        fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+        fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 
         int userSelection = fileChooser.showSaveDialog(this);
 
         if (userSelection == JFileChooser.APPROVE_OPTION) {
-            // Obtener la ruta seleccionada por el usuario
-            String saveFilePath = fileChooser.getSelectedFile().getAbsolutePath();
-            downloadFile(fileURL, saveFilePath);
+            // Obtener el directorio seleccionado y añadir el nombre del archivo
+            String saveDirectory = fileChooser.getSelectedFile().getAbsolutePath();
+            String saveFilePath = saveDirectory + "/" + defaultFileName;
+            boolean success = downloadFile(fileURL, saveFilePath);
+
+            if (success && nextButton != null) {
+                nextButton.setEnabled(true); // Desbloquear el siguiente botón
+                nextButton.setBackground(new Color(0,98,173));
+            }
         } else {
             JOptionPane.showMessageDialog(this, "Operación cancelada.");
         }
     }
-    
-    private void downloadFile(String fileURL, String saveFilePath) {
+
+    private boolean downloadFile(String fileURL, String saveFilePath) {
         try {
             URL url = new URL(fileURL);
             HttpURLConnection httpConnection = (HttpURLConnection) url.openConnection();
@@ -76,7 +85,9 @@ public class AccesoADatos extends javax.swing.JDialog {
 
                 outputStream.close();
                 inputStream.close();
+
                 JOptionPane.showMessageDialog(this, "Archivo descargado con éxito: " + saveFilePath);
+                return true;
             } else {
                 JOptionPane.showMessageDialog(this, "Error al descargar el archivo: Código " + responseCode);
             }
@@ -86,6 +97,7 @@ public class AccesoADatos extends javax.swing.JDialog {
             ex.printStackTrace();
             JOptionPane.showMessageDialog(this, "Ocurrió un error: " + ex.getMessage());
         }
+        return false;
     }
     
     /**
