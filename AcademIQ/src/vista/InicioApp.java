@@ -9,9 +9,10 @@ package vista;
  * @author Alumno
  */
 public class InicioApp extends javax.swing.JDialog {
-
-    AccesoADatos accesoADatos;
     
+    AccesoADatos accesoADatos;
+    SistemasDeGestion sistemas;
+
     /**
      * Creates new form InicioApp
      */
@@ -40,12 +41,12 @@ public class InicioApp extends javax.swing.JDialog {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         roundButton5 = new vista.RoundButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        btn_programacion = new javax.swing.JButton();
+        btn_accesoADatos = new javax.swing.JButton();
+        btn_desarrollo = new javax.swing.JButton();
+        btn_sistemasGestion = new javax.swing.JButton();
+        btn_psp = new javax.swing.JButton();
+        btn_empresa = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1920, 1080));
@@ -147,47 +148,52 @@ public class InicioApp extends javax.swing.JDialog {
         jPanel2.add(roundButton5);
         roundButton5.setBounds(800, 30, 90, 90);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ProgramacionMultimedia.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.setContentAreaFilled(false);
-        jPanel2.add(jButton1);
-        jButton1.setBounds(620, 140, 270, 210);
+        btn_programacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ProgramacionMultimedia.png"))); // NOI18N
+        btn_programacion.setBorder(null);
+        btn_programacion.setContentAreaFilled(false);
+        jPanel2.add(btn_programacion);
+        btn_programacion.setBounds(620, 140, 270, 210);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/accesoADatos.png"))); // NOI18N
-        jButton2.setBorder(null);
-        jButton2.setContentAreaFilled(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btn_accesoADatos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/accesoADatos.png"))); // NOI18N
+        btn_accesoADatos.setBorder(null);
+        btn_accesoADatos.setContentAreaFilled(false);
+        btn_accesoADatos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btn_accesoADatosActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton2);
-        jButton2.setBounds(20, 140, 270, 210);
+        jPanel2.add(btn_accesoADatos);
+        btn_accesoADatos.setBounds(20, 140, 270, 210);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/DesarrolloInterfaces.png"))); // NOI18N
-        jButton3.setBorder(null);
-        jButton3.setBorderPainted(false);
-        jButton3.setContentAreaFilled(false);
-        jPanel2.add(jButton3);
-        jButton3.setBounds(320, 140, 270, 210);
+        btn_desarrollo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/DesarrolloInterfaces.png"))); // NOI18N
+        btn_desarrollo.setBorder(null);
+        btn_desarrollo.setBorderPainted(false);
+        btn_desarrollo.setContentAreaFilled(false);
+        jPanel2.add(btn_desarrollo);
+        btn_desarrollo.setBounds(320, 140, 270, 210);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/SistemaGestion.png"))); // NOI18N
-        jButton4.setBorder(null);
-        jButton4.setContentAreaFilled(false);
-        jPanel2.add(jButton4);
-        jButton4.setBounds(20, 370, 270, 210);
+        btn_sistemasGestion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/SistemaGestion.png"))); // NOI18N
+        btn_sistemasGestion.setBorder(null);
+        btn_sistemasGestion.setContentAreaFilled(false);
+        btn_sistemasGestion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_sistemasGestionActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_sistemasGestion);
+        btn_sistemasGestion.setBounds(20, 370, 270, 210);
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/PSP.png"))); // NOI18N
-        jButton5.setBorder(null);
-        jButton5.setContentAreaFilled(false);
-        jPanel2.add(jButton5);
-        jButton5.setBounds(320, 370, 270, 210);
+        btn_psp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/PSP.png"))); // NOI18N
+        btn_psp.setBorder(null);
+        btn_psp.setContentAreaFilled(false);
+        jPanel2.add(btn_psp);
+        btn_psp.setBounds(320, 370, 270, 210);
 
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Empresa.png"))); // NOI18N
-        jButton6.setBorder(null);
-        jButton6.setContentAreaFilled(false);
-        jPanel2.add(jButton6);
-        jButton6.setBounds(620, 370, 270, 210);
+        btn_empresa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Empresa.png"))); // NOI18N
+        btn_empresa.setBorder(null);
+        btn_empresa.setContentAreaFilled(false);
+        jPanel2.add(btn_empresa);
+        btn_empresa.setBounds(620, 370, 270, 210);
 
         getContentPane().add(jPanel2);
         jPanel2.setBounds(350, 0, 930, 830);
@@ -195,20 +201,26 @@ public class InicioApp extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btn_accesoADatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_accesoADatosActionPerformed
         this.dispose();
         accesoADatos = new AccesoADatos(this, true);
         accesoADatos.setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btn_accesoADatosActionPerformed
+
+    private void btn_sistemasGestionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sistemasGestionActionPerformed
+        this.dispose();
+        sistemas = new SistemasDeGestion(this, true);
+        sistemas.setVisible(true);
+    }//GEN-LAST:event_btn_sistemasGestionActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_accesoADatos;
+    private javax.swing.JButton btn_desarrollo;
+    private javax.swing.JButton btn_empresa;
+    private javax.swing.JButton btn_programacion;
+    private javax.swing.JButton btn_psp;
+    private javax.swing.JButton btn_sistemasGestion;
     private javax.swing.JLabel img_logo1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
