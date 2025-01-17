@@ -5,6 +5,7 @@
 package vista;
 
 import java.awt.Color;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,7 +20,9 @@ public class InicioSesion extends javax.swing.JFrame {
      */
     public InicioSesion() {
         initComponents();
-        
+        setTitle("Inicio de Sesion - AcademIQ");   
+        ImageIcon icon = new ImageIcon(getClass().getResource("/imagenes/iconoAcademiq.png"));
+        setIconImage(icon.getImage());
     }
 
     /**

@@ -22,6 +22,10 @@ public class InicioApp extends javax.swing.JDialog {
     public InicioApp(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        setTitle("Inicio - AcademIQ");
+        ImageIcon icon = new ImageIcon(getClass().getResource("/imagenes/iconoAcademiq.png"));
+        setIconImage(icon.getImage());        
+
     }
 
     /**
@@ -279,19 +283,16 @@ public class InicioApp extends javax.swing.JDialog {
     }//GEN-LAST:event_btn_ajustesMouseExited
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-<<<<<<< HEAD
     private javax.swing.JButton btn_accesoADatos;
+    private vista.RoundButton btn_ajustes;
+    private vista.RoundButton btn_calendario;
     private javax.swing.JButton btn_desarrollo;
     private javax.swing.JButton btn_empresa;
+    private vista.RoundButton btn_inicio;
+    private vista.RoundButton btn_notas;
     private javax.swing.JButton btn_programacion;
     private javax.swing.JButton btn_psp;
     private javax.swing.JButton btn_sistemasGestion;
-=======
-    private vista.RoundButton btn_ajustes;
-    private vista.RoundButton btn_calendario;
-    private vista.RoundButton btn_inicio;
-    private vista.RoundButton btn_notas;
->>>>>>> 187b603a4b11a0571ae172f0d16cba48e56a29dd
     private javax.swing.JLabel img_logo1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

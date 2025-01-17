@@ -25,6 +25,11 @@ public class SistemasDeGestion extends javax.swing.JDialog {
     public SistemasDeGestion(java.awt.Dialog parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        setTitle("Clase - Sistemas de Gestion");
+        
+        ImageIcon icon = new ImageIcon(getClass().getResource("/imagenes/iconoAcademiq.png"));
+        setIconImage(icon.getImage());
+
         btn_tema2.setEnabled(false);
         btn_tema3.setEnabled(false);
         btn_tema4.setEnabled(false);
@@ -59,6 +64,7 @@ public class SistemasDeGestion extends javax.swing.JDialog {
         btn_tema2 = new vista.RoundButton();
         btn_tema3 = new vista.RoundButton();
         btn_tema4 = new vista.RoundButton();
+        btn_atras = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         img_logo1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
@@ -69,6 +75,8 @@ public class SistemasDeGestion extends javax.swing.JDialog {
         btn_calendario = new vista.RoundButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1280, 832));
+        setResizable(false);
         getContentPane().setLayout(null);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -77,7 +85,7 @@ public class SistemasDeGestion extends javax.swing.JDialog {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel2.setText("Sistemas de Gestion");
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(40, 50, 622, 72);
+        jLabel2.setBounds(110, 50, 622, 72);
 
         roundButton5.setBackground(new java.awt.Color(153, 153, 153));
         roundButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Usuario.png"))); // NOI18N
@@ -128,6 +136,18 @@ public class SistemasDeGestion extends javax.swing.JDialog {
         jPanel2.add(btn_tema4);
         btn_tema4.setBounds(30, 380, 870, 80);
 
+        btn_atras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/flecha_atras.png"))); // NOI18N
+        btn_atras.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btn_atras.setBorderPainted(false);
+        btn_atras.setContentAreaFilled(false);
+        btn_atras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_atrasActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_atras);
+        btn_atras.setBounds(40, 70, 50, 40);
+
         getContentPane().add(jPanel2);
         jPanel2.setBounds(350, 0, 930, 830);
 
@@ -146,14 +166,6 @@ public class SistemasDeGestion extends javax.swing.JDialog {
         btn_inicio.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         btn_inicio.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btn_inicio.setRound(15);
-        btn_inicio.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btn_inicioMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btn_inicioMouseExited(evt);
-            }
-        });
 
         btn_notas.setBackground(new java.awt.Color(0, 98, 173));
         btn_notas.setForeground(new java.awt.Color(255, 255, 255));
@@ -198,10 +210,8 @@ public class SistemasDeGestion extends javax.swing.JDialog {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btn_calendarioMouseEntered(evt);
             }
-        });
-        btn_calendario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_calendarioActionPerformed(evt);
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_calendarioMouseExited(evt);
             }
         });
 
@@ -240,7 +250,7 @@ public class SistemasDeGestion extends javax.swing.JDialog {
                 .addComponent(btn_notas, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btn_ajustes, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(484, 484, 484))
+                .addGap(481, 481, 481))
         );
 
         getContentPane().add(jPanel1);
@@ -256,6 +266,50 @@ public class SistemasDeGestion extends javax.swing.JDialog {
     private void btn_tema1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_tema1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_tema1ActionPerformed
+
+    private void btn_notasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_notasMouseEntered
+        btn_notas.setBackground(Color.WHITE);
+        btn_notas.setForeground(new Color(0, 98, 173));
+        btn_notas.setIcon(new ImageIcon(getClass().getResource("/imagenes/notas_color.png")));
+    }//GEN-LAST:event_btn_notasMouseEntered
+
+    private void btn_notasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_notasMouseExited
+        btn_notas.setBackground(new Color(0, 98, 173));
+        btn_notas.setForeground(Color.WHITE);
+        btn_notas.setIcon(new ImageIcon(getClass().getResource("/imagenes/NotasIcono.png")));
+    }//GEN-LAST:event_btn_notasMouseExited
+
+    private void btn_ajustesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ajustesMouseEntered
+        btn_ajustes.setBackground(Color.WHITE);
+        btn_ajustes.setForeground(new Color(0, 98, 173));
+        btn_ajustes.setIcon(new ImageIcon(getClass().getResource("/imagenes/ajustes_color.png")));
+    }//GEN-LAST:event_btn_ajustesMouseEntered
+
+    private void btn_ajustesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ajustesMouseExited
+        btn_ajustes.setBackground(new Color(0, 98, 173));
+        btn_ajustes.setForeground(Color.WHITE);
+        btn_ajustes.setIcon(new ImageIcon(getClass().getResource("/imagenes/AjustesIcono.png")));
+
+    }//GEN-LAST:event_btn_ajustesMouseExited
+
+    private void btn_calendarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_calendarioMouseEntered
+        btn_calendario.setBackground(Color.WHITE);
+        btn_calendario.setForeground(new Color(0, 98, 173));
+        btn_calendario.setIcon(new ImageIcon(getClass().getResource("/imagenes/calendario_color.png")));
+
+    }//GEN-LAST:event_btn_calendarioMouseEntered
+
+    private void btn_calendarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_calendarioMouseExited
+        btn_calendario.setBackground(new Color(0, 98, 173));
+        btn_calendario.setForeground(Color.WHITE);
+        btn_calendario.setIcon(new ImageIcon(getClass().getResource("/imagenes/CalendarioIcono.png")));
+    }//GEN-LAST:event_btn_calendarioMouseExited
+
+    private void btn_atrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_atrasActionPerformed
+        this.dispose(); // Cierra la ventana actual
+        InicioApp inicioApp = new InicioApp(null, true); // Crea una nueva instancia de InicioApp
+        inicioApp.setVisible(true); // Muestra la ventana de inicio
+    }//GEN-LAST:event_btn_atrasActionPerformed
 
     private void chooseAndDownloadFile(String fileURL, javax.swing.JButton nextButton, String defaultFileName) {
         JFileChooser fileChooser = new JFileChooser();
@@ -314,51 +368,9 @@ public class SistemasDeGestion extends javax.swing.JDialog {
         return false;
     }
     
-    private void btn_inicioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_inicioMouseEntered
-        btn_inicio.setBackground(Color.WHITE);
-        btn_inicio.setForeground(new Color(0, 98, 173));
-        btn_inicio.setIcon(new ImageIcon(getClass().getResource("/imagenes/HomeIcono.png")));
-    }//GEN-LAST:event_btn_inicioMouseEntered
-
-    private void btn_inicioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_inicioMouseExited
-        btn_inicio.setBackground(new Color(0, 98, 173));
-        btn_inicio.setForeground(Color.WHITE);
-        btn_inicio.setIcon(new ImageIcon(getClass().getResource("/imagenes/home_blanco.png")));
-    }//GEN-LAST:event_btn_inicioMouseExited
-
-    private void btn_notasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_notasMouseEntered
-        btn_notas.setBackground(Color.WHITE);
-        btn_notas.setForeground(new Color(0, 98, 173));
-        btn_notas.setIcon(new ImageIcon(getClass().getResource("/imagenes/notas_color.png")));
-    }//GEN-LAST:event_btn_notasMouseEntered
-
-    private void btn_notasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_notasMouseExited
-        btn_notas.setBackground(new Color(0, 98, 173));
-        btn_notas.setForeground(Color.WHITE);
-        btn_notas.setIcon(new ImageIcon(getClass().getResource("/imagenes/NotasIcono.png")));
-    }//GEN-LAST:event_btn_notasMouseExited
-
-    private void btn_ajustesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ajustesMouseEntered
-        btn_ajustes.setBackground(Color.WHITE);
-        btn_ajustes.setForeground(new Color(0, 98, 173));
-        btn_ajustes.setIcon(new ImageIcon(getClass().getResource("/imagenes/ajustes_color.png")));
-    }//GEN-LAST:event_btn_ajustesMouseEntered
-
-    private void btn_ajustesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ajustesMouseExited
-        btn_ajustes.setBackground(new Color(0, 98, 173));
-        btn_ajustes.setForeground(Color.WHITE);
-        btn_ajustes.setIcon(new ImageIcon(getClass().getResource("/imagenes/AjustesIcono.png")));
-    }//GEN-LAST:event_btn_ajustesMouseExited
-
-    private void btn_calendarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_calendarioMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_calendarioMouseEntered
-
-    private void btn_calendarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_calendarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_calendarioActionPerformed
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private vista.RoundButton btn_ajustes;
+    private javax.swing.JButton btn_atras;
     private vista.RoundButton btn_calendario;
     private vista.RoundButton btn_inicio;
     private vista.RoundButton btn_notas;
