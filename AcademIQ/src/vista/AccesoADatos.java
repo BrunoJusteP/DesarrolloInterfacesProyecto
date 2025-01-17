@@ -124,6 +124,7 @@ public class AccesoADatos extends javax.swing.JDialog {
         btn_tema2 = new vista.RoundButton();
         btn_tema3 = new vista.RoundButton();
         btn_tema4 = new vista.RoundButton();
+        btn_atras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1280, 832));
@@ -217,7 +218,7 @@ public class AccesoADatos extends javax.swing.JDialog {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel2.setText("Acceso A Datos");
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(40, 50, 622, 72);
+        jLabel2.setBounds(110, 50, 622, 72);
 
         roundButton5.setBackground(new java.awt.Color(153, 153, 153));
         roundButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Usuario.png"))); // NOI18N
@@ -262,6 +263,12 @@ public class AccesoADatos extends javax.swing.JDialog {
         jPanel2.add(btn_tema4);
         btn_tema4.setBounds(30, 380, 870, 80);
 
+        btn_atras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/flecha_atras.png"))); // NOI18N
+        btn_atras.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btn_atras.setBorderPainted(false);
+        jPanel2.add(btn_atras);
+        btn_atras.setBounds(40, 70, 50, 40);
+
         getContentPane().add(jPanel2);
         jPanel2.setBounds(350, 0, 930, 830);
 
@@ -273,6 +280,7 @@ public class AccesoADatos extends javax.swing.JDialog {
     }//GEN-LAST:event_btn_tema2ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_atras;
     private vista.RoundButton btn_tema1;
     private vista.RoundButton btn_tema2;
     private vista.RoundButton btn_tema3;
