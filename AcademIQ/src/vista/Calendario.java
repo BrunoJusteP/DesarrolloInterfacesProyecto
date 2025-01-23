@@ -43,6 +43,7 @@ public class Calendario extends javax.swing.JDialog {
         setLocationByPlatform(true);
         setMaximumSize(new java.awt.Dimension(1280, 832));
         setMinimumSize(new java.awt.Dimension(1280, 832));
+        setPreferredSize(new java.awt.Dimension(1280, 832));
         setResizable(false);
         getContentPane().setLayout(null);
 
