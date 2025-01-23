@@ -4,8 +4,17 @@
  */
 package vista;
 
+import com.formdev.flatlaf.FlatClientProperties;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 import java.awt.Color;
 import javax.swing.ImageIcon;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -19,6 +28,75 @@ public class Notas extends javax.swing.JDialog {
     public Notas(java.awt.Dialog parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        estiloTabla(jTable1);
+        cargarDatos(jTable1);
+    }
+    
+    private void cargarDatos(JTable tabla){
+        // Obtén el modelo de la tabla
+        DefaultTableModel model = (DefaultTableModel) tabla.getModel();
+
+        // Limpiar cualquier fila existente
+        model.setRowCount(0);
+
+        // Agregar la fila con los nombres de los trimestres
+
+        // Agregar las notas (puedes personalizar los valores según tus necesidades)
+        model.addRow(new Object[]{"1º", 8.5, 7.0, 9.0, 6.5, 8.0, 7.5});
+        model.addRow(new Object[]{"2º", 7.5, 8.0, 7.8, 7.0, 9.0, 8.2});
+        model.addRow(new Object[]{"3º", 9.0, 6.5, 8.5, 7.8, 7.2, 8.0});
+        // Calcular la media de cada columna
+        int numRows = model.getRowCount(); // Número de filas
+        int numCols = model.getColumnCount(); // Número de columnas
+        Object[] finalRow = new Object[numCols];
+        finalRow[0] = "Final"; // Título de la fila final
+
+        for (int col = 1; col < numCols; col++) { // Comenzar desde la columna 1 (omitimos la columna "1º", "2º", etc.)
+            double suma = 0;
+            int count = 0; // Contador de valores válidos
+
+            for (int row = 0; row < numRows; row++) {
+                Object value = model.getValueAt(row, col);
+                if (value instanceof Number) { // Verificar que es un número
+                    suma += ((Number) value).doubleValue();
+                    count++;
+                }
+            }
+
+            // Calcular la media y asignar a la fila final
+            finalRow[col] = count > 0 ? Math.round((suma / count) * 100.0) / 100.0 : null; // Redondear a 2 decimales
+        }
+
+        // Añadir la fila final al modelo
+        model.addRow(finalRow);
+
+    }
+
+    private void estiloTabla(JTable tabla){
+        // Estilo general del encabezado
+        tabla.getTableHeader().putClientProperty(FlatClientProperties.STYLE, ""
+            + "background: #0062AD;" // Color de fondo del encabezado
+            + "foreground: #FFFFFF;" // Color del texto del encabezado
+            + "font: bold $h3.font;" // Fuente en negrita y tamaño adaptable
+            + "border: empty;" // Sin bordes alrededor del encabezado
+        );
+
+        // Estilo general de las celdas de la tabla
+        tabla.putClientProperty(FlatClientProperties.STYLE, ""
+            + "alternateRowColor: #F7F9FC;" // Color alternativo para las filas
+            + "rowHeight: 40;" // Altura de cada fila
+            + "font: $h4.font;" // Fuente general para las celdas
+            + "selectionBackground: #0B84FF;" // Color de fondo al seleccionar
+            + "selectionForeground: #FFFFFF;" // Color del texto al seleccionar
+            + "gridColor: #D1D9E0;" // Color de las líneas entre celdas
+        );
+
+        // Habilitar sombreado para un aspecto más atractivo
+        tabla.putClientProperty(FlatClientProperties.COMPONENT_ROUND_RECT, true);
+
+        // Otras configuraciones visuales (opcional)
+        tabla.setShowGrid(true); // Mostrar las líneas de la cuadrícula
+        tabla.setRowHeight(40); // Aumentar la altura de las filas para mejor visibilidad
     }
 
     /**
@@ -38,6 +116,12 @@ public class Notas extends javax.swing.JDialog {
         btn_notas = new vista.RoundButton();
         btn_ajustes = new vista.RoundButton();
         btn_calendario = new vista.RoundButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        roundButton5 = new vista.RoundButton();
+        btn_atras = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Notas");
@@ -168,6 +252,59 @@ public class Notas extends javax.swing.JDialog {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 350, 832);
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(null);
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Notas");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(400, 50, 120, 72);
+
+        roundButton5.setBackground(new java.awt.Color(153, 153, 153));
+        roundButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Usuario.png"))); // NOI18N
+        roundButton5.setRound(110);
+        jPanel2.add(roundButton5);
+        roundButton5.setBounds(800, 30, 90, 90);
+
+        btn_atras.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btn_atras.setBorderPainted(false);
+        btn_atras.setContentAreaFilled(false);
+        btn_atras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_atrasActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_atras);
+        btn_atras.setBounds(40, 70, 50, 40);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Trimestre", "AADD", "PSP", "SGE", "EIE", "DI", "PPMM"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                true, false, false, false, false, false, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel2.add(jScrollPane1);
+        jScrollPane1.setBounds(32, 130, 870, 640);
+
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(350, 0, 930, 830);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -229,15 +366,27 @@ public class Notas extends javax.swing.JDialog {
         btn_inicio.setIcon(new ImageIcon(getClass().getResource("/imagenes/home_blanco.png")));
     }//GEN-LAST:event_btn_inicioMouseExited
 
+    private void btn_atrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_atrasActionPerformed
+        this.dispose(); // Cierra la ventana actual
+        InicioApp inicioApp = new InicioApp(null, true); // Crea una nueva instancia de InicioApp
+        inicioApp.setVisible(true); // Muestra la ventana de inicio
+    }//GEN-LAST:event_btn_atrasActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private vista.RoundButton btn_ajustes;
+    private javax.swing.JButton btn_atras;
     private vista.RoundButton btn_calendario;
     private vista.RoundButton btn_inicio;
     private vista.RoundButton btn_notas;
     private javax.swing.JLabel img_logo1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTable jTable1;
+    private vista.RoundButton roundButton5;
     // End of variables declaration//GEN-END:variables
 }
