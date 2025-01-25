@@ -35,11 +35,11 @@ public class InicioSesion extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        panelInicio = new vista.PanelRound();
+        panelInicio = new swing.PanelRound();
         jLabel1 = new javax.swing.JLabel();
-        txt_email = new vista.RoundTextField();
-        btn_inicioSesion = new vista.RoundButton();
-        pwd_contrasenia = new vista.PasswordField();
+        txt_email = new swing.RoundTextField();
+        btn_inicioSesion = new swing.RoundButton();
+        pwd_contrasenia = new swing.PasswordField();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -246,12 +246,12 @@ public class InicioSesion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private vista.RoundButton btn_inicioSesion;
+    private swing.RoundButton btn_inicioSesion;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private vista.PanelRound panelInicio;
-    private vista.PasswordField pwd_contrasenia;
-    private vista.RoundTextField txt_email;
+    private swing.PanelRound panelInicio;
+    private swing.PasswordField pwd_contrasenia;
+    private swing.RoundTextField txt_email;
     // End of variables declaration//GEN-END:variables
 }

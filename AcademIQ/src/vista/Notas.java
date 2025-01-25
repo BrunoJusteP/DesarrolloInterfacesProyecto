@@ -108,29 +108,28 @@ public class Notas extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        menu_lateral = new javax.swing.JPanel();
         img_logo1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
-        btn_inicio = new vista.RoundButton();
-        btn_notas = new vista.RoundButton();
-        btn_ajustes = new vista.RoundButton();
-        btn_calendario = new vista.RoundButton();
+        btn_inicio = new swing.RoundButton();
+        btn_notas = new swing.RoundButton();
+        btn_ajustes = new swing.RoundButton();
+        btn_calendario = new swing.RoundButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        roundButton5 = new vista.RoundButton();
         btn_atras = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        btn_perfil = new swing.RoundButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Notas");
-        setMaximumSize(new java.awt.Dimension(1280, 832));
         setMinimumSize(new java.awt.Dimension(1280, 832));
         getContentPane().setLayout(null);
 
-        jPanel1.setBackground(new java.awt.Color(0, 98, 173));
-        jPanel1.setPreferredSize(new java.awt.Dimension(350, 832));
+        menu_lateral.setBackground(new java.awt.Color(0, 98, 173));
+        menu_lateral.setPreferredSize(new java.awt.Dimension(350, 832));
 
         img_logo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/EtiquetaRiojaRecurso 3x1.png"))); // NOI18N
 
@@ -189,6 +188,11 @@ public class Notas extends javax.swing.JDialog {
                 btn_ajustesMouseExited(evt);
             }
         });
+        btn_ajustes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ajustesActionPerformed(evt);
+            }
+        });
 
         btn_calendario.setBackground(new java.awt.Color(0, 98, 173));
         btn_calendario.setForeground(new java.awt.Color(255, 255, 255));
@@ -211,14 +215,14 @@ public class Notas extends javax.swing.JDialog {
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout menu_lateralLayout = new javax.swing.GroupLayout(menu_lateral);
+        menu_lateral.setLayout(menu_lateralLayout);
+        menu_lateralLayout.setHorizontalGroup(
+            menu_lateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menu_lateralLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(menu_lateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(menu_lateralLayout.createSequentialGroup()
                         .addComponent(img_logo1)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE))
@@ -229,11 +233,11 @@ public class Notas extends javax.swing.JDialog {
                     .addComponent(btn_calendario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        menu_lateralLayout.setVerticalGroup(
+            menu_lateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menu_lateralLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(menu_lateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(img_logo1)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -249,8 +253,8 @@ public class Notas extends javax.swing.JDialog {
                 .addGap(481, 481, 481))
         );
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 350, 832);
+        getContentPane().add(menu_lateral);
+        menu_lateral.setBounds(0, 0, 350, 832);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(null);
@@ -260,12 +264,6 @@ public class Notas extends javax.swing.JDialog {
         jLabel2.setText("Notas");
         jPanel2.add(jLabel2);
         jLabel2.setBounds(400, 50, 120, 72);
-
-        roundButton5.setBackground(new java.awt.Color(153, 153, 153));
-        roundButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Usuario.png"))); // NOI18N
-        roundButton5.setRound(110);
-        jPanel2.add(roundButton5);
-        roundButton5.setBounds(800, 30, 90, 90);
 
         btn_atras.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         btn_atras.setBorderPainted(false);
@@ -301,6 +299,17 @@ public class Notas extends javax.swing.JDialog {
 
         jPanel2.add(jScrollPane1);
         jScrollPane1.setBounds(32, 130, 870, 640);
+
+        btn_perfil.setBackground(new java.awt.Color(0, 98, 173));
+        btn_perfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/user.png"))); // NOI18N
+        btn_perfil.setRound(110);
+        btn_perfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_perfilActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_perfil);
+        btn_perfil.setBounds(810, 30, 80, 80);
 
         getContentPane().add(jPanel2);
         jPanel2.setBounds(350, 0, 930, 830);
@@ -372,21 +381,33 @@ public class Notas extends javax.swing.JDialog {
         inicioApp.setVisible(true); // Muestra la ventana de inicio
     }//GEN-LAST:event_btn_atrasActionPerformed
 
+    private void btn_perfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_perfilActionPerformed
+        this.dispose();
+        Ajustes ventanaAjustes = new Ajustes(this, true);
+        ventanaAjustes.setVisible(true);
+    }//GEN-LAST:event_btn_perfilActionPerformed
+
+    private void btn_ajustesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ajustesActionPerformed
+        this.dispose();
+        Ajustes ventanaAjustes = new Ajustes(this, true);
+        ventanaAjustes.setVisible(true);
+    }//GEN-LAST:event_btn_ajustesActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private vista.RoundButton btn_ajustes;
+    private swing.RoundButton btn_ajustes;
     private javax.swing.JButton btn_atras;
-    private vista.RoundButton btn_calendario;
-    private vista.RoundButton btn_inicio;
-    private vista.RoundButton btn_notas;
+    private swing.RoundButton btn_calendario;
+    private swing.RoundButton btn_inicio;
+    private swing.RoundButton btn_notas;
+    private swing.RoundButton btn_perfil;
     private javax.swing.JLabel img_logo1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTable jTable1;
-    private vista.RoundButton roundButton5;
+    private javax.swing.JPanel menu_lateral;
     // End of variables declaration//GEN-END:variables
 }

@@ -30,16 +30,16 @@ public class Calendario extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        menu_lateral = new javax.swing.JPanel();
         img_logo1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
-        btn_inicio = new vista.RoundButton();
-        btn_notas = new vista.RoundButton();
-        btn_ajustes = new vista.RoundButton();
-        btn_calendario = new vista.RoundButton();
+        btn_inicio = new swing.RoundButton();
+        btn_notas = new swing.RoundButton();
+        btn_ajustes = new swing.RoundButton();
+        btn_calendario = new swing.RoundButton();
         jPanel2 = new javax.swing.JPanel();
-        calendarCustom2 = new vista.CalendarCustom();
+        calendarCustom2 = new swing.CalendarCustom();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setLocationByPlatform(true);
@@ -49,8 +49,8 @@ public class Calendario extends javax.swing.JDialog {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jPanel1.setBackground(new java.awt.Color(0, 98, 173));
-        jPanel1.setPreferredSize(new java.awt.Dimension(350, 832));
+        menu_lateral.setBackground(new java.awt.Color(0, 98, 173));
+        menu_lateral.setPreferredSize(new java.awt.Dimension(350, 832));
 
         img_logo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/EtiquetaRiojaRecurso 3x1.png"))); // NOI18N
 
@@ -105,6 +105,11 @@ public class Calendario extends javax.swing.JDialog {
                 btn_ajustesMouseExited(evt);
             }
         });
+        btn_ajustes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ajustesActionPerformed(evt);
+            }
+        });
 
         btn_calendario.setForeground(new java.awt.Color(0, 98, 173));
         btn_calendario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/calendario_color.png"))); // NOI18N
@@ -123,14 +128,14 @@ public class Calendario extends javax.swing.JDialog {
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout menu_lateralLayout = new javax.swing.GroupLayout(menu_lateral);
+        menu_lateral.setLayout(menu_lateralLayout);
+        menu_lateralLayout.setHorizontalGroup(
+            menu_lateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menu_lateralLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(menu_lateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(menu_lateralLayout.createSequentialGroup()
                         .addComponent(img_logo1)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE))
@@ -141,11 +146,11 @@ public class Calendario extends javax.swing.JDialog {
                     .addComponent(btn_calendario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        menu_lateralLayout.setVerticalGroup(
+            menu_lateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menu_lateralLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(menu_lateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(img_logo1)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -161,8 +166,8 @@ public class Calendario extends javax.swing.JDialog {
                 .addGap(484, 484, 484))
         );
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 350, 832);
+        getContentPane().add(menu_lateral);
+        menu_lateral.setBounds(0, 0, 350, 832);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -231,18 +236,24 @@ public class Calendario extends javax.swing.JDialog {
         btn_ajustes.setIcon(new ImageIcon(getClass().getResource("/imagenes/AjustesIcono.png")));
     }//GEN-LAST:event_btn_ajustesMouseExited
 
+    private void btn_ajustesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ajustesActionPerformed
+        this.dispose();
+        Ajustes ventanaAjustes = new Ajustes(this, true);
+        ventanaAjustes.setVisible(true);
+    }//GEN-LAST:event_btn_ajustesActionPerformed
+
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private vista.RoundButton btn_ajustes;
-    private vista.RoundButton btn_calendario;
-    private vista.RoundButton btn_inicio;
-    private vista.RoundButton btn_notas;
-    private vista.CalendarCustom calendarCustom2;
+    private swing.RoundButton btn_ajustes;
+    private swing.RoundButton btn_calendario;
+    private swing.RoundButton btn_inicio;
+    private swing.RoundButton btn_notas;
+    private swing.CalendarCustom calendarCustom2;
     private javax.swing.JLabel img_logo1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JPanel menu_lateral;
     // End of variables declaration//GEN-END:variables
 }
