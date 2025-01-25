@@ -19,6 +19,9 @@ public class Calendario extends javax.swing.JDialog {
     public Calendario(java.awt.Dialog parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        setTitle("Calendario - AcademIQ");   
+        ImageIcon icon = new ImageIcon(getClass().getResource("/imagenes/iconoAcademiq.png"));
+        setIconImage(icon.getImage());
     }
 
     /**
@@ -190,33 +193,15 @@ public class Calendario extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_calendarioActionPerformed
 
-    private void btn_inicioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_inicioMouseEntered
-        btn_inicio.setBackground(Color.WHITE);
-        btn_inicio.setForeground(new Color(0, 98, 173));
-        btn_inicio.setIcon(new ImageIcon(getClass().getResource("/imagenes/HomeIcono.png")));
-    }//GEN-LAST:event_btn_inicioMouseEntered
-
-    private void btn_inicioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_inicioMouseExited
-        btn_inicio.setBackground(new Color(0, 98, 173));
-        btn_inicio.setForeground(Color.WHITE);
-        btn_inicio.setIcon(new ImageIcon(getClass().getResource("/imagenes/home_blanco.png")));
-    }//GEN-LAST:event_btn_inicioMouseExited
-
     private void btn_calendarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_calendarioMouseEntered
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_calendarioMouseEntered
 
-    private void btn_notasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_notasMouseEntered
-        btn_notas.setBackground(Color.WHITE);
-        btn_notas.setForeground(new Color(0, 98, 173));
-        btn_notas.setIcon(new ImageIcon(getClass().getResource("/imagenes/notas_color.png")));
-    }//GEN-LAST:event_btn_notasMouseEntered
-
-    private void btn_notasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_notasMouseExited
-        btn_notas.setBackground(new Color(0, 98, 173));
-        btn_notas.setForeground(Color.WHITE);
-        btn_notas.setIcon(new ImageIcon(getClass().getResource("/imagenes/NotasIcono.png")));
-    }//GEN-LAST:event_btn_notasMouseExited
+    private void btn_ajustesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ajustesMouseExited
+        btn_ajustes.setBackground(new Color(0, 98, 173));
+        btn_ajustes.setForeground(Color.WHITE);
+        btn_ajustes.setIcon(new ImageIcon(getClass().getResource("/imagenes/AjustesIcono.png")));
+    }//GEN-LAST:event_btn_ajustesMouseExited
 
     private void btn_ajustesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ajustesMouseEntered
         btn_ajustes.setBackground(Color.WHITE);
@@ -224,11 +209,29 @@ public class Calendario extends javax.swing.JDialog {
         btn_ajustes.setIcon(new ImageIcon(getClass().getResource("/imagenes/ajustes_color.png")));
     }//GEN-LAST:event_btn_ajustesMouseEntered
 
-    private void btn_ajustesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ajustesMouseExited
-        btn_ajustes.setBackground(new Color(0, 98, 173));
-        btn_ajustes.setForeground(Color.WHITE);
-        btn_ajustes.setIcon(new ImageIcon(getClass().getResource("/imagenes/AjustesIcono.png")));
-    }//GEN-LAST:event_btn_ajustesMouseExited
+    private void btn_notasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_notasMouseExited
+        btn_notas.setBackground(new Color(0, 98, 173));
+        btn_notas.setForeground(Color.WHITE);
+        btn_notas.setIcon(new ImageIcon(getClass().getResource("/imagenes/NotasIcono.png")));
+    }//GEN-LAST:event_btn_notasMouseExited
+
+    private void btn_notasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_notasMouseEntered
+        btn_notas.setBackground(Color.WHITE);
+        btn_notas.setForeground(new Color(0, 98, 173));
+        btn_notas.setIcon(new ImageIcon(getClass().getResource("/imagenes/notas_color.png")));
+    }//GEN-LAST:event_btn_notasMouseEntered
+
+    private void btn_inicioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_inicioMouseExited
+        btn_inicio.setBackground(new Color(0, 98, 173));
+        btn_inicio.setForeground(Color.WHITE);
+        btn_inicio.setIcon(new ImageIcon(getClass().getResource("/imagenes/home_blanco.png")));
+    }//GEN-LAST:event_btn_inicioMouseExited
+
+    private void btn_inicioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_inicioMouseEntered
+        btn_inicio.setBackground(Color.WHITE);
+        btn_inicio.setForeground(new Color(0, 98, 173));
+        btn_inicio.setIcon(new ImageIcon(getClass().getResource("/imagenes/HomeIcono.png")));
+    }//GEN-LAST:event_btn_inicioMouseEntered
 
     
 

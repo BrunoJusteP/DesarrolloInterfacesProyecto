@@ -38,6 +38,13 @@ public class Notas extends javax.swing.JDialog {
         btn_notas = new vista.RoundButton();
         btn_ajustes = new vista.RoundButton();
         btn_calendario = new vista.RoundButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        roundButton5 = new vista.RoundButton();
+        btn_Trimestre1 = new vista.RoundButton();
+        btn_Trimestre2 = new vista.RoundButton();
+        btn_Trimestre3 = new vista.RoundButton();
+        btn_Global = new vista.RoundButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Notas");
@@ -168,6 +175,109 @@ public class Notas extends javax.swing.JDialog {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 350, 832);
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(null);
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 98, 173));
+        jLabel2.setText("Calificaciones");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(340, 40, 230, 72);
+
+        roundButton5.setBackground(new java.awt.Color(153, 153, 153));
+        roundButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Usuario.png"))); // NOI18N
+        roundButton5.setRound(110);
+        jPanel2.add(roundButton5);
+        roundButton5.setBounds(800, 30, 90, 90);
+
+        btn_Trimestre1.setBackground(new java.awt.Color(0, 98, 173));
+        btn_Trimestre1.setForeground(new java.awt.Color(255, 255, 255));
+        btn_Trimestre1.setText("Trimestre 3");
+        btn_Trimestre1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btn_Trimestre1.setHideActionText(true);
+        btn_Trimestre1.setRound(15);
+        btn_Trimestre1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_Trimestre1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_Trimestre1MouseExited(evt);
+            }
+        });
+        btn_Trimestre1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Trimestre1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_Trimestre1);
+        btn_Trimestre1.setBounds(470, 140, 133, 52);
+
+        btn_Trimestre2.setBackground(new java.awt.Color(0, 98, 173));
+        btn_Trimestre2.setForeground(new java.awt.Color(255, 255, 255));
+        btn_Trimestre2.setText("Trimestre 1");
+        btn_Trimestre2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btn_Trimestre2.setRound(15);
+        btn_Trimestre2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_Trimestre2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_Trimestre2MouseExited(evt);
+            }
+        });
+        btn_Trimestre2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Trimestre2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_Trimestre2);
+        btn_Trimestre2.setBounds(70, 140, 133, 52);
+
+        btn_Trimestre3.setBackground(new java.awt.Color(0, 98, 173));
+        btn_Trimestre3.setForeground(new java.awt.Color(255, 255, 255));
+        btn_Trimestre3.setText("Nota Global");
+        btn_Trimestre3.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btn_Trimestre3.setRound(15);
+        btn_Trimestre3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_Trimestre3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_Trimestre3MouseExited(evt);
+            }
+        });
+        btn_Trimestre3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Trimestre3ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_Trimestre3);
+        btn_Trimestre3.setBounds(670, 140, 138, 52);
+
+        btn_Global.setBackground(new java.awt.Color(0, 98, 173));
+        btn_Global.setForeground(new java.awt.Color(255, 255, 255));
+        btn_Global.setText("Trimestre 2");
+        btn_Global.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btn_Global.setRound(15);
+        btn_Global.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_GlobalMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_GlobalMouseExited(evt);
+            }
+        });
+        btn_Global.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_GlobalActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_Global);
+        btn_Global.setBounds(270, 140, 133, 52);
+
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(350, 0, 930, 830);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -229,15 +339,70 @@ public class Notas extends javax.swing.JDialog {
         btn_inicio.setIcon(new ImageIcon(getClass().getResource("/imagenes/home_blanco.png")));
     }//GEN-LAST:event_btn_inicioMouseExited
 
+    private void btn_Trimestre1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Trimestre1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Trimestre1MouseEntered
+
+    private void btn_Trimestre1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Trimestre1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Trimestre1MouseExited
+
+    private void btn_Trimestre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Trimestre1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Trimestre1ActionPerformed
+
+    private void btn_Trimestre2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Trimestre2MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Trimestre2MouseEntered
+
+    private void btn_Trimestre2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Trimestre2MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Trimestre2MouseExited
+
+    private void btn_Trimestre2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Trimestre2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Trimestre2ActionPerformed
+
+    private void btn_Trimestre3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Trimestre3MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Trimestre3MouseEntered
+
+    private void btn_Trimestre3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Trimestre3MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Trimestre3MouseExited
+
+    private void btn_Trimestre3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Trimestre3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Trimestre3ActionPerformed
+
+    private void btn_GlobalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_GlobalMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_GlobalMouseEntered
+
+    private void btn_GlobalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_GlobalMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_GlobalMouseExited
+
+    private void btn_GlobalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_GlobalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_GlobalActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private vista.RoundButton btn_Global;
+    private vista.RoundButton btn_Trimestre1;
+    private vista.RoundButton btn_Trimestre2;
+    private vista.RoundButton btn_Trimestre3;
     private vista.RoundButton btn_ajustes;
     private vista.RoundButton btn_calendario;
     private vista.RoundButton btn_inicio;
     private vista.RoundButton btn_notas;
     private javax.swing.JLabel img_logo1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
+    private vista.RoundButton roundButton5;
     // End of variables declaration//GEN-END:variables
 }
