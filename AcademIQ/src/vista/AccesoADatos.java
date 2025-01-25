@@ -114,51 +114,45 @@ public class AccesoADatos extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
+        menu_lateral = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        roundButton5 = new vista.RoundButton();
-        btn_tema1 = new vista.RoundButton();
-        btn_tema2 = new vista.RoundButton();
-        btn_tema3 = new vista.RoundButton();
-        btn_tema4 = new vista.RoundButton();
+        btn_tema1 = new swing.RoundButton();
+        btn_tema2 = new swing.RoundButton();
+        btn_tema3 = new swing.RoundButton();
+        btn_tema4 = new swing.RoundButton();
         btn_atras = new javax.swing.JButton();
+        btn_perfil = new swing.RoundButton();
         jPanel1 = new javax.swing.JPanel();
         img_logo1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
-        btn_inicio = new vista.RoundButton();
-        btn_notas = new vista.RoundButton();
-        btn_ajustes = new vista.RoundButton();
-        btn_calendario = new vista.RoundButton();
+        btn_inicio = new swing.RoundButton();
+        btn_notas = new swing.RoundButton();
+        btn_ajustes = new swing.RoundButton();
+        btn_calendario = new swing.RoundButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1280, 832));
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setLayout(null);
+        menu_lateral.setBackground(new java.awt.Color(255, 255, 255));
+        menu_lateral.setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel2.setText("Acceso A Datos");
-        jPanel2.add(jLabel2);
+        menu_lateral.add(jLabel2);
         jLabel2.setBounds(110, 50, 622, 72);
-
-        roundButton5.setBackground(new java.awt.Color(153, 153, 153));
-        roundButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Usuario.png"))); // NOI18N
-        roundButton5.setRound(110);
-        jPanel2.add(roundButton5);
-        roundButton5.setBounds(800, 30, 90, 90);
 
         btn_tema1.setBackground(new java.awt.Color(0, 98, 173));
         btn_tema1.setForeground(new java.awt.Color(255, 255, 255));
         btn_tema1.setText("Tema 1: Fundamentos de la programacion");
         btn_tema1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         btn_tema1.setRound(15);
-        jPanel2.add(btn_tema1);
+        menu_lateral.add(btn_tema1);
         btn_tema1.setBounds(30, 140, 870, 80);
 
-        btn_tema2.setBackground(new java.awt.Color(0, 182, 246));
+        btn_tema2.setBackground(new java.awt.Color(113, 172, 218));
         btn_tema2.setForeground(new java.awt.Color(255, 255, 255));
         btn_tema2.setText("Tema 2: Manejo de Ficheros");
         btn_tema2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
@@ -168,23 +162,23 @@ public class AccesoADatos extends javax.swing.JDialog {
                 btn_tema2ActionPerformed(evt);
             }
         });
-        jPanel2.add(btn_tema2);
+        menu_lateral.add(btn_tema2);
         btn_tema2.setBounds(30, 220, 870, 80);
 
-        btn_tema3.setBackground(new java.awt.Color(0, 182, 246));
+        btn_tema3.setBackground(new java.awt.Color(113, 172, 218));
         btn_tema3.setForeground(new java.awt.Color(255, 255, 255));
         btn_tema3.setText("Tema 3: Conectores a Sistemas Gestores de Bases de datos");
         btn_tema3.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         btn_tema3.setRound(15);
-        jPanel2.add(btn_tema3);
+        menu_lateral.add(btn_tema3);
         btn_tema3.setBounds(30, 300, 870, 80);
 
-        btn_tema4.setBackground(new java.awt.Color(0, 182, 246));
+        btn_tema4.setBackground(new java.awt.Color(113, 172, 218));
         btn_tema4.setForeground(new java.awt.Color(255, 255, 255));
         btn_tema4.setText("Tema 4: Generacion de servicios de acceso a datos");
         btn_tema4.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         btn_tema4.setRound(15);
-        jPanel2.add(btn_tema4);
+        menu_lateral.add(btn_tema4);
         btn_tema4.setBounds(30, 380, 870, 80);
 
         btn_atras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/flecha_atras.png"))); // NOI18N
@@ -196,11 +190,22 @@ public class AccesoADatos extends javax.swing.JDialog {
                 btn_atrasActionPerformed(evt);
             }
         });
-        jPanel2.add(btn_atras);
+        menu_lateral.add(btn_atras);
         btn_atras.setBounds(40, 70, 50, 40);
 
-        getContentPane().add(jPanel2);
-        jPanel2.setBounds(350, 0, 930, 830);
+        btn_perfil.setBackground(new java.awt.Color(0, 98, 173));
+        btn_perfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/user.png"))); // NOI18N
+        btn_perfil.setRound(110);
+        btn_perfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_perfilActionPerformed(evt);
+            }
+        });
+        menu_lateral.add(btn_perfil);
+        btn_perfil.setBounds(810, 30, 80, 80);
+
+        getContentPane().add(menu_lateral);
+        menu_lateral.setBounds(350, 0, 930, 830);
 
         jPanel1.setBackground(new java.awt.Color(0, 98, 173));
         jPanel1.setPreferredSize(new java.awt.Dimension(350, 832));
@@ -247,6 +252,11 @@ public class AccesoADatos extends javax.swing.JDialog {
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btn_ajustesMouseExited(evt);
+            }
+        });
+        btn_ajustes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ajustesActionPerformed(evt);
             }
         });
 
@@ -358,22 +368,34 @@ public class AccesoADatos extends javax.swing.JDialog {
         btn_calendario.setIcon(new ImageIcon(getClass().getResource("/imagenes/CalendarioIcono.png")));
     }//GEN-LAST:event_btn_calendarioMouseExited
 
+    private void btn_perfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_perfilActionPerformed
+        this.dispose();
+        Ajustes ventanaAjustes = new Ajustes(this, true);
+        ventanaAjustes.setVisible(true);
+    }//GEN-LAST:event_btn_perfilActionPerformed
+
+    private void btn_ajustesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ajustesActionPerformed
+        this.dispose();
+        Ajustes ventanaAjustes = new Ajustes(this, true);
+        ventanaAjustes.setVisible(true);
+    }//GEN-LAST:event_btn_ajustesActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private vista.RoundButton btn_ajustes;
+    private swing.RoundButton btn_ajustes;
     private javax.swing.JButton btn_atras;
-    private vista.RoundButton btn_calendario;
-    private vista.RoundButton btn_inicio;
-    private vista.RoundButton btn_notas;
-    private vista.RoundButton btn_tema1;
-    private vista.RoundButton btn_tema2;
-    private vista.RoundButton btn_tema3;
-    private vista.RoundButton btn_tema4;
+    private swing.RoundButton btn_calendario;
+    private swing.RoundButton btn_inicio;
+    private swing.RoundButton btn_notas;
+    private swing.RoundButton btn_perfil;
+    private swing.RoundButton btn_tema1;
+    private swing.RoundButton btn_tema2;
+    private swing.RoundButton btn_tema3;
+    private swing.RoundButton btn_tema4;
     private javax.swing.JLabel img_logo1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
-    private vista.RoundButton roundButton5;
+    private javax.swing.JPanel menu_lateral;
     // End of variables declaration//GEN-END:variables
 }

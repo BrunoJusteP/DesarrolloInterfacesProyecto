@@ -10,6 +10,9 @@
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[1280, 832]"/>
     </Property>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[1280, 832]"/>
+    </Property>
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
@@ -33,7 +36,7 @@
     <Property name="useNullLayout" type="boolean" value="true"/>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="jPanel1">
+    <Container class="javax.swing.JPanel" name="menu_lateral">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ad" green="62" red="0" type="rgb"/>
@@ -113,7 +116,7 @@
             <Property name="text" type="java.lang.String" value="AcademIQ"/>
           </Properties>
         </Component>
-        <Component class="vista.RoundButton" name="btn_inicio">
+        <Component class="swing.RoundButton" name="btn_inicio">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ad" green="62" red="0" type="rgb"/>
@@ -136,7 +139,7 @@
             <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_inicioMouseExited"/>
           </Events>
         </Component>
-        <Component class="vista.RoundButton" name="btn_notas">
+        <Component class="swing.RoundButton" name="btn_notas">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ad" green="62" red="0" type="rgb"/>
@@ -159,7 +162,7 @@
             <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_notasMouseExited"/>
           </Events>
         </Component>
-        <Component class="vista.RoundButton" name="btn_ajustes">
+        <Component class="swing.RoundButton" name="btn_ajustes">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ad" green="62" red="0" type="rgb"/>
@@ -180,9 +183,10 @@
           <Events>
             <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_ajustesMouseEntered"/>
             <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_ajustesMouseExited"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_ajustesActionPerformed"/>
           </Events>
         </Component>
-        <Component class="vista.RoundButton" name="btn_calendario">
+        <Component class="swing.RoundButton" name="btn_calendario">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ad" green="62" red="0" type="rgb"/>
@@ -235,7 +239,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="vista.CalendarCustom" name="calendarCustom2">
+        <Component class="swing.CalendarCustom" name="calendarCustom2">
         </Component>
       </SubComponents>
     </Container>

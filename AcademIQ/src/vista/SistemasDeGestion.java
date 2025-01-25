@@ -57,102 +57,30 @@ public class SistemasDeGestion extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        roundButton5 = new vista.RoundButton();
-        btn_tema1 = new vista.RoundButton();
-        btn_tema2 = new vista.RoundButton();
-        btn_tema3 = new vista.RoundButton();
-        btn_tema4 = new vista.RoundButton();
-        btn_atras = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        menu_lateral = new javax.swing.JPanel();
         img_logo1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
-        btn_inicio = new vista.RoundButton();
-        btn_notas = new vista.RoundButton();
-        btn_ajustes = new vista.RoundButton();
-        btn_calendario = new vista.RoundButton();
+        btn_inicio = new swing.RoundButton();
+        btn_notas = new swing.RoundButton();
+        btn_ajustes = new swing.RoundButton();
+        btn_calendario = new swing.RoundButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        btn_tema1 = new swing.RoundButton();
+        btn_tema2 = new swing.RoundButton();
+        btn_tema3 = new swing.RoundButton();
+        btn_tema4 = new swing.RoundButton();
+        btn_atras = new javax.swing.JButton();
+        btn_perfil = new swing.RoundButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1280, 832));
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setLayout(null);
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel2.setText("Sistemas de Gestion");
-        jPanel2.add(jLabel2);
-        jLabel2.setBounds(110, 50, 622, 72);
-
-        roundButton5.setBackground(new java.awt.Color(153, 153, 153));
-        roundButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Usuario.png"))); // NOI18N
-        roundButton5.setRound(110);
-        jPanel2.add(roundButton5);
-        roundButton5.setBounds(800, 30, 90, 90);
-
-        btn_tema1.setBackground(new java.awt.Color(0, 98, 173));
-        btn_tema1.setForeground(new java.awt.Color(255, 255, 255));
-        btn_tema1.setText("Tema 1: Introduccion a Python");
-        btn_tema1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        btn_tema1.setRound(15);
-        btn_tema1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_tema1ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btn_tema1);
-        btn_tema1.setBounds(30, 140, 870, 80);
-
-        btn_tema2.setBackground(new java.awt.Color(0, 182, 246));
-        btn_tema2.setForeground(new java.awt.Color(255, 255, 255));
-        btn_tema2.setText("Tema 2: Bases de datos en Python");
-        btn_tema2.setActionCommand("Tema 2: Bases de Datos en Python");
-        btn_tema2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        btn_tema2.setRound(15);
-        btn_tema2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_tema2ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btn_tema2);
-        btn_tema2.setBounds(30, 220, 870, 80);
-
-        btn_tema3.setBackground(new java.awt.Color(0, 182, 246));
-        btn_tema3.setForeground(new java.awt.Color(255, 255, 255));
-        btn_tema3.setText("Tema 3: ERP");
-        btn_tema3.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        btn_tema3.setRound(15);
-        jPanel2.add(btn_tema3);
-        btn_tema3.setBounds(30, 300, 870, 80);
-
-        btn_tema4.setBackground(new java.awt.Color(0, 182, 246));
-        btn_tema4.setForeground(new java.awt.Color(255, 255, 255));
-        btn_tema4.setText("Tema 4: Perfex CRM");
-        btn_tema4.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        btn_tema4.setRound(15);
-        jPanel2.add(btn_tema4);
-        btn_tema4.setBounds(30, 380, 870, 80);
-
-        btn_atras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/flecha_atras.png"))); // NOI18N
-        btn_atras.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        btn_atras.setBorderPainted(false);
-        btn_atras.setContentAreaFilled(false);
-        btn_atras.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_atrasActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btn_atras);
-        btn_atras.setBounds(40, 70, 50, 40);
-
-        getContentPane().add(jPanel2);
-        jPanel2.setBounds(350, 0, 930, 830);
-
-        jPanel1.setBackground(new java.awt.Color(0, 98, 173));
-        jPanel1.setPreferredSize(new java.awt.Dimension(350, 832));
+        menu_lateral.setBackground(new java.awt.Color(0, 98, 173));
+        menu_lateral.setPreferredSize(new java.awt.Dimension(350, 832));
 
         img_logo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/EtiquetaRiojaRecurso 3x1.png"))); // NOI18N
 
@@ -198,6 +126,11 @@ public class SistemasDeGestion extends javax.swing.JDialog {
                 btn_ajustesMouseExited(evt);
             }
         });
+        btn_ajustes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ajustesActionPerformed(evt);
+            }
+        });
 
         btn_calendario.setBackground(new java.awt.Color(0, 98, 173));
         btn_calendario.setForeground(new java.awt.Color(255, 255, 255));
@@ -215,14 +148,14 @@ public class SistemasDeGestion extends javax.swing.JDialog {
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout menu_lateralLayout = new javax.swing.GroupLayout(menu_lateral);
+        menu_lateral.setLayout(menu_lateralLayout);
+        menu_lateralLayout.setHorizontalGroup(
+            menu_lateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menu_lateralLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(menu_lateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(menu_lateralLayout.createSequentialGroup()
                         .addComponent(img_logo1)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE))
@@ -233,11 +166,11 @@ public class SistemasDeGestion extends javax.swing.JDialog {
                     .addComponent(btn_calendario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        menu_lateralLayout.setVerticalGroup(
+            menu_lateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menu_lateralLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(menu_lateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(img_logo1)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -253,8 +186,85 @@ public class SistemasDeGestion extends javax.swing.JDialog {
                 .addGap(481, 481, 481))
         );
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 350, 832);
+        getContentPane().add(menu_lateral);
+        menu_lateral.setBounds(0, 0, 350, 832);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(null);
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel2.setText("Sistemas de Gestion");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(110, 50, 622, 72);
+
+        btn_tema1.setBackground(new java.awt.Color(0, 98, 173));
+        btn_tema1.setForeground(new java.awt.Color(255, 255, 255));
+        btn_tema1.setText("Tema 1: Introduccion a Python");
+        btn_tema1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btn_tema1.setRound(15);
+        btn_tema1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_tema1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_tema1);
+        btn_tema1.setBounds(30, 140, 870, 80);
+
+        btn_tema2.setBackground(new java.awt.Color(113, 172, 218));
+        btn_tema2.setForeground(new java.awt.Color(255, 255, 255));
+        btn_tema2.setText("Tema 2: Bases de datos en Python");
+        btn_tema2.setActionCommand("Tema 2: Bases de Datos en Python");
+        btn_tema2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btn_tema2.setRound(15);
+        btn_tema2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_tema2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_tema2);
+        btn_tema2.setBounds(30, 220, 870, 80);
+
+        btn_tema3.setBackground(new java.awt.Color(113, 172, 218));
+        btn_tema3.setForeground(new java.awt.Color(255, 255, 255));
+        btn_tema3.setText("Tema 3: ERP");
+        btn_tema3.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btn_tema3.setRound(15);
+        jPanel2.add(btn_tema3);
+        btn_tema3.setBounds(30, 300, 870, 80);
+
+        btn_tema4.setBackground(new java.awt.Color(113, 172, 218));
+        btn_tema4.setForeground(new java.awt.Color(255, 255, 255));
+        btn_tema4.setText("Tema 4: Perfex CRM");
+        btn_tema4.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btn_tema4.setRound(15);
+        jPanel2.add(btn_tema4);
+        btn_tema4.setBounds(30, 380, 870, 80);
+
+        btn_atras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/flecha_atras.png"))); // NOI18N
+        btn_atras.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btn_atras.setBorderPainted(false);
+        btn_atras.setContentAreaFilled(false);
+        btn_atras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_atrasActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_atras);
+        btn_atras.setBounds(40, 70, 50, 40);
+
+        btn_perfil.setBackground(new java.awt.Color(0, 98, 173));
+        btn_perfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/user.png"))); // NOI18N
+        btn_perfil.setRound(110);
+        btn_perfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_perfilActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_perfil);
+        btn_perfil.setBounds(810, 30, 80, 80);
+
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(350, 0, 930, 830);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -310,6 +320,18 @@ public class SistemasDeGestion extends javax.swing.JDialog {
         InicioApp inicioApp = new InicioApp(null, true); // Crea una nueva instancia de InicioApp
         inicioApp.setVisible(true); // Muestra la ventana de inicio
     }//GEN-LAST:event_btn_atrasActionPerformed
+
+    private void btn_perfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_perfilActionPerformed
+        this.dispose();
+        Ajustes ventanaAjustes = new Ajustes(this, true);
+        ventanaAjustes.setVisible(true);
+    }//GEN-LAST:event_btn_perfilActionPerformed
+
+    private void btn_ajustesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ajustesActionPerformed
+        this.dispose();
+        Ajustes ventanaAjustes = new Ajustes(this, true);
+        ventanaAjustes.setVisible(true);
+    }//GEN-LAST:event_btn_ajustesActionPerformed
 
     private void chooseAndDownloadFile(String fileURL, javax.swing.JButton nextButton, String defaultFileName) {
         JFileChooser fileChooser = new JFileChooser();
@@ -369,21 +391,21 @@ public class SistemasDeGestion extends javax.swing.JDialog {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private vista.RoundButton btn_ajustes;
+    private swing.RoundButton btn_ajustes;
     private javax.swing.JButton btn_atras;
-    private vista.RoundButton btn_calendario;
-    private vista.RoundButton btn_inicio;
-    private vista.RoundButton btn_notas;
-    private vista.RoundButton btn_tema1;
-    private vista.RoundButton btn_tema2;
-    private vista.RoundButton btn_tema3;
-    private vista.RoundButton btn_tema4;
+    private swing.RoundButton btn_calendario;
+    private swing.RoundButton btn_inicio;
+    private swing.RoundButton btn_notas;
+    private swing.RoundButton btn_perfil;
+    private swing.RoundButton btn_tema1;
+    private swing.RoundButton btn_tema2;
+    private swing.RoundButton btn_tema3;
+    private swing.RoundButton btn_tema4;
     private javax.swing.JLabel img_logo1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
-    private vista.RoundButton roundButton5;
+    private javax.swing.JPanel menu_lateral;
     // End of variables declaration//GEN-END:variables
 }

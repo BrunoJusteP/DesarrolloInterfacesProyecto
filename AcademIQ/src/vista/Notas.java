@@ -4,8 +4,17 @@
  */
 package vista;
 
+import com.formdev.flatlaf.FlatClientProperties;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 import java.awt.Color;
 import javax.swing.ImageIcon;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -19,6 +28,75 @@ public class Notas extends javax.swing.JDialog {
     public Notas(java.awt.Dialog parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        estiloTabla(jTable1);
+        cargarDatos(jTable1);
+    }
+    
+    private void cargarDatos(JTable tabla){
+        // Obtén el modelo de la tabla
+        DefaultTableModel model = (DefaultTableModel) tabla.getModel();
+
+        // Limpiar cualquier fila existente
+        model.setRowCount(0);
+
+        // Agregar la fila con los nombres de los trimestres
+
+        // Agregar las notas (puedes personalizar los valores según tus necesidades)
+        model.addRow(new Object[]{"1º", 8.5, 7.0, 9.0, 6.5, 8.0, 7.5});
+        model.addRow(new Object[]{"2º", 7.5, 8.0, 7.8, 7.0, 9.0, 8.2});
+        model.addRow(new Object[]{"3º", 9.0, 6.5, 8.5, 7.8, 7.2, 8.0});
+        // Calcular la media de cada columna
+        int numRows = model.getRowCount(); // Número de filas
+        int numCols = model.getColumnCount(); // Número de columnas
+        Object[] finalRow = new Object[numCols];
+        finalRow[0] = "Final"; // Título de la fila final
+
+        for (int col = 1; col < numCols; col++) { // Comenzar desde la columna 1 (omitimos la columna "1º", "2º", etc.)
+            double suma = 0;
+            int count = 0; // Contador de valores válidos
+
+            for (int row = 0; row < numRows; row++) {
+                Object value = model.getValueAt(row, col);
+                if (value instanceof Number) { // Verificar que es un número
+                    suma += ((Number) value).doubleValue();
+                    count++;
+                }
+            }
+
+            // Calcular la media y asignar a la fila final
+            finalRow[col] = count > 0 ? Math.round((suma / count) * 100.0) / 100.0 : null; // Redondear a 2 decimales
+        }
+
+        // Añadir la fila final al modelo
+        model.addRow(finalRow);
+
+    }
+
+    private void estiloTabla(JTable tabla){
+        // Estilo general del encabezado
+        tabla.getTableHeader().putClientProperty(FlatClientProperties.STYLE, ""
+            + "background: #0062AD;" // Color de fondo del encabezado
+            + "foreground: #FFFFFF;" // Color del texto del encabezado
+            + "font: bold $h3.font;" // Fuente en negrita y tamaño adaptable
+            + "border: empty;" // Sin bordes alrededor del encabezado
+        );
+
+        // Estilo general de las celdas de la tabla
+        tabla.putClientProperty(FlatClientProperties.STYLE, ""
+            + "alternateRowColor: #F7F9FC;" // Color alternativo para las filas
+            + "rowHeight: 40;" // Altura de cada fila
+            + "font: $h4.font;" // Fuente general para las celdas
+            + "selectionBackground: #0B84FF;" // Color de fondo al seleccionar
+            + "selectionForeground: #FFFFFF;" // Color del texto al seleccionar
+            + "gridColor: #D1D9E0;" // Color de las líneas entre celdas
+        );
+
+        // Habilitar sombreado para un aspecto más atractivo
+        tabla.putClientProperty(FlatClientProperties.COMPONENT_ROUND_RECT, true);
+
+        // Otras configuraciones visuales (opcional)
+        tabla.setShowGrid(true); // Mostrar las líneas de la cuadrícula
+        tabla.setRowHeight(40); // Aumentar la altura de las filas para mejor visibilidad
     }
 
     /**
@@ -30,10 +108,11 @@ public class Notas extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        menu_lateral = new javax.swing.JPanel();
         img_logo1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
+<<<<<<< HEAD
         btn_inicio = new vista.RoundButton();
         btn_notas = new vista.RoundButton();
         btn_ajustes = new vista.RoundButton();
@@ -45,15 +124,26 @@ public class Notas extends javax.swing.JDialog {
         btn_Trimestre2 = new vista.RoundButton();
         btn_Trimestre3 = new vista.RoundButton();
         btn_Global = new vista.RoundButton();
+=======
+        btn_inicio = new swing.RoundButton();
+        btn_notas = new swing.RoundButton();
+        btn_ajustes = new swing.RoundButton();
+        btn_calendario = new swing.RoundButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        btn_atras = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        btn_perfil = new swing.RoundButton();
+>>>>>>> 47864387a2d6d94ba3062aa3979cb5a936a84346
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Notas");
-        setMaximumSize(new java.awt.Dimension(1280, 832));
         setMinimumSize(new java.awt.Dimension(1280, 832));
         getContentPane().setLayout(null);
 
-        jPanel1.setBackground(new java.awt.Color(0, 98, 173));
-        jPanel1.setPreferredSize(new java.awt.Dimension(350, 832));
+        menu_lateral.setBackground(new java.awt.Color(0, 98, 173));
+        menu_lateral.setPreferredSize(new java.awt.Dimension(350, 832));
 
         img_logo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/EtiquetaRiojaRecurso 3x1.png"))); // NOI18N
 
@@ -112,6 +202,11 @@ public class Notas extends javax.swing.JDialog {
                 btn_ajustesMouseExited(evt);
             }
         });
+        btn_ajustes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ajustesActionPerformed(evt);
+            }
+        });
 
         btn_calendario.setBackground(new java.awt.Color(0, 98, 173));
         btn_calendario.setForeground(new java.awt.Color(255, 255, 255));
@@ -134,14 +229,14 @@ public class Notas extends javax.swing.JDialog {
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout menu_lateralLayout = new javax.swing.GroupLayout(menu_lateral);
+        menu_lateral.setLayout(menu_lateralLayout);
+        menu_lateralLayout.setHorizontalGroup(
+            menu_lateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menu_lateralLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(menu_lateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(menu_lateralLayout.createSequentialGroup()
                         .addComponent(img_logo1)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE))
@@ -152,11 +247,11 @@ public class Notas extends javax.swing.JDialog {
                     .addComponent(btn_calendario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        menu_lateralLayout.setVerticalGroup(
+            menu_lateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menu_lateralLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(menu_lateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(img_logo1)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -172,8 +267,66 @@ public class Notas extends javax.swing.JDialog {
                 .addGap(481, 481, 481))
         );
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 350, 832);
+        getContentPane().add(menu_lateral);
+        menu_lateral.setBounds(0, 0, 350, 832);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(null);
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Notas");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(400, 50, 120, 72);
+
+        btn_atras.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btn_atras.setBorderPainted(false);
+        btn_atras.setContentAreaFilled(false);
+        btn_atras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_atrasActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_atras);
+        btn_atras.setBounds(40, 70, 50, 40);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Trimestre", "AADD", "PSP", "SGE", "EIE", "DI", "PPMM"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                true, false, false, false, false, false, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel2.add(jScrollPane1);
+        jScrollPane1.setBounds(32, 130, 870, 640);
+
+        btn_perfil.setBackground(new java.awt.Color(0, 98, 173));
+        btn_perfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/user.png"))); // NOI18N
+        btn_perfil.setRound(110);
+        btn_perfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_perfilActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_perfil);
+        btn_perfil.setBounds(810, 30, 80, 80);
+
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(350, 0, 930, 830);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(null);
@@ -388,21 +541,56 @@ public class Notas extends javax.swing.JDialog {
     }//GEN-LAST:event_btn_GlobalActionPerformed
 
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private vista.RoundButton btn_Global;
-    private vista.RoundButton btn_Trimestre1;
-    private vista.RoundButton btn_Trimestre2;
-    private vista.RoundButton btn_Trimestre3;
-    private vista.RoundButton btn_ajustes;
-    private vista.RoundButton btn_calendario;
-    private vista.RoundButton btn_inicio;
-    private vista.RoundButton btn_notas;
+    // Variables declaration - do not modify                     
+    private swing.RoundButton btn_Global;
+    private swing.RoundButton btn_Trimestre1;
+    private swing.RoundButton btn_Trimestre2;
+    private swing.RoundButton btn_Trimestre3;
+    private swing.RoundButton btn_ajustes;
+    private swing.RoundButton btn_calendario;
+    private swing.RoundButton btn_inicio;
+    private swing.RoundButton btn_notas;
     private javax.swing.JLabel img_logo1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
-    private vista.RoundButton roundButton5;
+    private swing.RoundButton roundButton5;
+    private void btn_atrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_atrasActionPerformed
+        this.dispose(); // Cierra la ventana actual
+        InicioApp inicioApp = new InicioApp(null, true); // Crea una nueva instancia de InicioApp
+        inicioApp.setVisible(true); // Muestra la ventana de inicio
+    }//GEN-LAST:event_btn_atrasActionPerformed
+
+    private void btn_perfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_perfilActionPerformed
+        this.dispose();
+        Ajustes ventanaAjustes = new Ajustes(this, true);
+        ventanaAjustes.setVisible(true);
+    }//GEN-LAST:event_btn_perfilActionPerformed
+
+    private void btn_ajustesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ajustesActionPerformed
+        this.dispose();
+        Ajustes ventanaAjustes = new Ajustes(this, true);
+        ventanaAjustes.setVisible(true);
+    }//GEN-LAST:event_btn_ajustesActionPerformed
+
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private swing.RoundButton btn_ajustes;
+    private javax.swing.JButton btn_atras;
+    private swing.RoundButton btn_calendario;
+    private swing.RoundButton btn_inicio;
+    private swing.RoundButton btn_notas;
+    private swing.RoundButton btn_perfil;
+    private javax.swing.JLabel img_logo1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JPanel menu_lateral;
+>>>>>>> 47864387a2d6d94ba3062aa3979cb5a936a84346
     // End of variables declaration//GEN-END:variables
 }

@@ -72,7 +72,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Container class="vista.PanelRound" name="panelInicio">
+        <Container class="swing.PanelRound" name="panelInicio">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ad" green="62" red="0" type="rgb"/>
@@ -133,7 +133,7 @@
                 <Property name="text" type="java.lang.String" value="Inicia Sesi&#xf3;n en AcademIQ"/>
               </Properties>
             </Component>
-            <Component class="vista.RoundTextField" name="txt_email">
+            <Component class="swing.RoundTextField" name="txt_email">
               <Properties>
                 <Property name="text" type="java.lang.String" value="E-mail"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -148,7 +148,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_emailActionPerformed"/>
               </Events>
             </Component>
-            <Component class="vista.RoundButton" name="btn_inicioSesion">
+            <Component class="swing.RoundButton" name="btn_inicioSesion">
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ad" green="62" red="0" type="rgb"/>
@@ -162,7 +162,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_inicioSesionActionPerformed"/>
               </Events>
             </Component>
-            <Component class="vista.PasswordField" name="pwd_contrasenia">
+            <Component class="swing.PasswordField" name="pwd_contrasenia">
               <Properties>
                 <Property name="text" type="java.lang.String" value="passwordField1"/>
               </Properties>
