@@ -13,8 +13,8 @@ import javax.swing.JOptionPane;
  * @author Alumno
  */
 public class InicioSesion extends javax.swing.JFrame {
-    String correo = "a@me.com";
-    String contrasenia = "1234";
+    private String correo = "alumno@gmail.com";
+    private String contrasenia = "alumno";
     /**
      * Creates new form InicioSesion
      */
@@ -43,8 +43,10 @@ public class InicioSesion extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Inicio de Sesión");
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(1280, 832));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -209,6 +211,65 @@ public class InicioSesion extends javax.swing.JFrame {
         pwd_contrasenia.setForeground(Color.BLACK);
     }//GEN-LAST:event_pwd_contraseniaMouseClicked
 
+    //Futura mejora, que el usuario pueda cambiar su contraseña
+    public void cambiarContrasenia() {
+        // Crear el cuadro de diálogo para cambio de contraseña
+        javax.swing.JDialog dialog = new javax.swing.JDialog((java.awt.Frame) null, "Cambiar Contraseña", true);
+        dialog.setSize(400, 300);
+        dialog.setLayout(new java.awt.GridLayout(4, 2));
+
+        // Crear componentes
+        javax.swing.JLabel lblPwdActual = new javax.swing.JLabel("Contraseña Actual:");
+        javax.swing.JPasswordField txtPwdActual = new javax.swing.JPasswordField();
+        javax.swing.JLabel lblPwdNueva = new javax.swing.JLabel("Nueva Contraseña:");
+        javax.swing.JPasswordField txtPwdNueva = new javax.swing.JPasswordField();
+        javax.swing.JLabel lblPwdConfirmar = new javax.swing.JLabel("Confirmar Nueva Contraseña:");
+        javax.swing.JPasswordField txtPwdConfirmar = new javax.swing.JPasswordField();
+        javax.swing.JButton btnGuardar = new javax.swing.JButton("Guardar");
+        javax.swing.JButton btnCancelar = new javax.swing.JButton("Cancelar");
+
+        // Añadir componentes al diálogo
+        dialog.add(lblPwdActual);
+        dialog.add(txtPwdActual);
+        dialog.add(lblPwdNueva);
+        dialog.add(txtPwdNueva);
+        dialog.add(lblPwdConfirmar);
+        dialog.add(txtPwdConfirmar);
+        dialog.add(btnGuardar);
+        dialog.add(btnCancelar);
+
+        // Acción del botón Guardar
+        btnGuardar.addActionListener(e -> {
+            // Obtener las contraseñas de los campos
+            String pwdActual = new String(txtPwdActual.getPassword());
+            String pwdNueva = new String(txtPwdNueva.getPassword());
+            String pwdConfirmar = new String(txtPwdConfirmar.getPassword());
+
+            // Validar contraseña actual
+            if (!pwdActual.equals(contrasenia)) {
+                javax.swing.JOptionPane.showMessageDialog(dialog, "La contraseña actual no es correcta.", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            // Validar nueva contraseña y confirmación
+            if (pwdNueva.isEmpty() || !pwdNueva.equals(pwdConfirmar)) {
+                javax.swing.JOptionPane.showMessageDialog(dialog, "La nueva contraseña no coincide o está vacía.", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            // Actualizar la contraseña
+            contrasenia = pwdActual;
+            javax.swing.JOptionPane.showMessageDialog(dialog, "Contraseña actualizada con éxito.", "Éxito", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+            dialog.dispose();
+    });
+
+    // Acción del botón Cancelar
+    btnCancelar.addActionListener(e -> dialog.dispose());
+
+    // Mostrar el diálogo
+    dialog.setLocationRelativeTo(null);
+    dialog.setVisible(true);
+}
     /**
      * @param args the command line arguments
      */

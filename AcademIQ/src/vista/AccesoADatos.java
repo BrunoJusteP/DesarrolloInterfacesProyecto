@@ -132,6 +132,7 @@ public class AccesoADatos extends javax.swing.JDialog {
         btn_calendario = new swing.RoundButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Acceso a Datos");
         setPreferredSize(new java.awt.Dimension(1280, 832));
         setResizable(false);
         getContentPane().setLayout(null);

@@ -124,7 +124,7 @@ public class Notas extends javax.swing.JDialog {
         btn_perfil = new swing.RoundButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Notas");
+        setTitle("Notas - AcademIQ");
         setMinimumSize(new java.awt.Dimension(1280, 832));
         getContentPane().setLayout(null);
 

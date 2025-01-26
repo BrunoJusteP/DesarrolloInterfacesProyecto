@@ -56,6 +56,7 @@ public class InicioApp extends javax.swing.JDialog {
         btn_empresa = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Inicio");
         setMaximumSize(new java.awt.Dimension(1920, 1080));
         setMinimumSize(new java.awt.Dimension(1280, 832));
         getContentPane().setLayout(null);
