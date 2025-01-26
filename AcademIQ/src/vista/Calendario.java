@@ -45,6 +45,7 @@ public class Calendario extends javax.swing.JDialog {
         calendarCustom2 = new swing.CalendarCustom();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Calendario");
         setLocationByPlatform(true);
         setMaximumSize(new java.awt.Dimension(1280, 832));
         setMinimumSize(new java.awt.Dimension(1280, 832));
@@ -76,6 +77,11 @@ public class Calendario extends javax.swing.JDialog {
                 btn_inicioMouseExited(evt);
             }
         });
+        btn_inicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_inicioActionPerformed(evt);
+            }
+        });
 
         btn_notas.setBackground(new java.awt.Color(0, 98, 173));
         btn_notas.setForeground(new java.awt.Color(255, 255, 255));
@@ -90,6 +96,11 @@ public class Calendario extends javax.swing.JDialog {
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btn_notasMouseExited(evt);
+            }
+        });
+        btn_notas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_notasActionPerformed(evt);
             }
         });
 
@@ -179,8 +190,8 @@ public class Calendario extends javax.swing.JDialog {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(calendarCustom2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(calendarCustom2, javax.swing.GroupLayout.DEFAULT_SIZE, 934, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -244,6 +255,18 @@ public class Calendario extends javax.swing.JDialog {
         Ajustes ventanaAjustes = new Ajustes(this, true);
         ventanaAjustes.setVisible(true);
     }//GEN-LAST:event_btn_ajustesActionPerformed
+
+    private void btn_inicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inicioActionPerformed
+        this.dispose();
+        InicioApp inicio = new InicioApp(null, true);
+        inicio.setVisible(true);
+    }//GEN-LAST:event_btn_inicioActionPerformed
+
+    private void btn_notasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_notasActionPerformed
+        this.dispose();
+        Notas ventanaNotas = new Notas(this, true);
+        ventanaNotas.setVisible(true);
+    }//GEN-LAST:event_btn_notasActionPerformed
 
     
 

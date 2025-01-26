@@ -75,6 +75,7 @@ public class SistemasDeGestion extends javax.swing.JDialog {
         btn_perfil = new swing.RoundButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Sistemas de Gestión");
         setPreferredSize(new java.awt.Dimension(1280, 832));
         setResizable(false);
         getContentPane().setLayout(null);

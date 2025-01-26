@@ -57,11 +57,12 @@ public class CalendarCustom extends javax.swing.JPanel {
 
         lbTime.setFont(new java.awt.Font("sansserif", 1, 48)); // NOI18N
         lbTime.setForeground(new java.awt.Color(201, 201, 201));
-        lbTime.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lbTime.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbTime.setText("9:32");
 
         lbType.setFont(new java.awt.Font("sansserif", 1, 25)); // NOI18N
         lbType.setForeground(new java.awt.Color(201, 201, 201));
+        lbType.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbType.setText("PM");
 
         lbDate.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
@@ -72,16 +73,16 @@ public class CalendarCustom extends javax.swing.JPanel {
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(71, 71, 71)
-                .addComponent(lbTime, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(15, 15, 15)
+                .addComponent(lbTime, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lbType, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(lbDate, javax.swing.GroupLayout.DEFAULT_SIZE, 283, Short.MAX_VALUE)
+                .addComponent(lbDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
